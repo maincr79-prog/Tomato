@@ -34,6 +34,7 @@ import kotlinx.coroutines.launch
 import org.nsh07.pomodoro.data.Stat
 import org.nsh07.pomodoro.data.StatRepository
 import org.nsh07.pomodoro.data.StateRepository
+import org.nsh07.pomodoro.data.TestLogRepository
 import org.nsh07.pomodoro.data.TopicRepository
 import org.nsh07.pomodoro.service.TimerHelper
 import org.nsh07.pomodoro.ui.Screen
@@ -46,7 +47,8 @@ class TimerViewModel(
     private val timerHelper: TimerHelper,
     private val stateRepository: StateRepository,
     private val statRepository: StatRepository,
-    private val topicRepository: TopicRepository
+    private val topicRepository: TopicRepository,
+    private val testLogRepository: TestLogRepository
 ) : ViewModel() {
     val rootBackstack = mutableStateListOf<Screen>(Screen.Timer)
 
@@ -108,6 +110,19 @@ class TimerViewModel(
             }
 
             else -> timerHelper.onAction(action)
+        }
+    }
+
+    fun logTests(testCount: Int, note: String) {
+        if (testCount > 0) {
+            viewModelScope.launch(Dispatchers.IO) {
+                testLogRepository.logTests(
+                    topicId = currentTopic.value.id,
+                    testCount = testCount,
+                    durationMillis = currentTopic.value.focusTime,
+                    note = note
+                )
+            }
         }
     }
 }

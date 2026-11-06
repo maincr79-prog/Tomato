@@ -23,8 +23,8 @@ import androidx.room3.Database
 import androidx.room3.RoomDatabase
 
 @Database(
-    entities = [IntPreference::class, BooleanPreference::class, StringPreference::class, Stat::class, Topic::class],
-    version = 3,
+    entities = [IntPreference::class, BooleanPreference::class, StringPreference::class, Stat::class, Topic::class, TestLog::class],
+    version = 4,
     autoMigrations = [
         AutoMigration(from = 1, to = 2)
     ]
@@ -35,4 +35,5 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun statDao(): StatDao
     abstract fun topicDao(): TopicDao
     abstract fun systemDao(): SystemDao
+    abstract fun testLogDao(): TestLogDao
 }

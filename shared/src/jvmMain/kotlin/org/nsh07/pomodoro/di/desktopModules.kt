@@ -39,14 +39,17 @@ import org.nsh07.pomodoro.billing.BillingManager
 import org.nsh07.pomodoro.data.AppDatabase
 import org.nsh07.pomodoro.data.AppPreferenceRepository
 import org.nsh07.pomodoro.data.AppStatRepository
+import org.nsh07.pomodoro.data.AppTestLogRepository
 import org.nsh07.pomodoro.data.AppTopicRepository
 import org.nsh07.pomodoro.data.BackupRestoreManager
 import org.nsh07.pomodoro.data.DesktopBackupRestoreManager
 import org.nsh07.pomodoro.data.MIGRATION_2_3
+import org.nsh07.pomodoro.data.MIGRATION_3_4
 import org.nsh07.pomodoro.data.PreferenceRepository
 import org.nsh07.pomodoro.data.SeedDefaultTopicCallback
 import org.nsh07.pomodoro.data.StatRepository
 import org.nsh07.pomodoro.data.StateRepository
+import org.nsh07.pomodoro.data.TestLogRepository
 import org.nsh07.pomodoro.data.TopicRepository
 import org.nsh07.pomodoro.service.TimerHelper
 import org.nsh07.pomodoro.service.TimerManager
@@ -64,6 +67,7 @@ val dbModule = module {
     single { get<AppDatabase>().statDao() }
     single { get<AppDatabase>().topicDao() }
     single { get<AppDatabase>().systemDao() }
+    single { get<AppDatabase>().testLogDao() }
 }
 
 val viewModels = module {
@@ -84,6 +88,7 @@ val servicesModule = module {
 
     single<AppInfo> { create(::createAppInfo) }
     single<AppStatRepository>() bind StatRepository::class
+    single<AppTestLogRepository>() bind TestLogRepository::class
     single<AppTopicRepository>() bind TopicRepository::class
     single<AppPreferenceRepository>() bind PreferenceRepository::class
     single<StateRepository>()
@@ -113,7 +118,7 @@ private fun createDatabase(): AppDatabase {
         .databaseBuilder<AppDatabase>(name = dbFile.absolutePath)
         .setDriver(BundledSQLiteDriver())
         .setQueryCoroutineContext(Dispatchers.IO)
-        .addMigrations(MIGRATION_2_3)
+        .addMigrations(MIGRATION_2_3, MIGRATION_3_4)
         .addCallback(SeedDefaultTopicCallback)
         .build()
 }

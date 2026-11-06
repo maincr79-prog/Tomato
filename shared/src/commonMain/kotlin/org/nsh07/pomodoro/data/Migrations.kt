@@ -98,3 +98,50 @@ val MIGRATION_2_3 = object : Migration(2, 3) {
         connection.execSQL("DELETE FROM boolean_preference WHERE key IN ('autostart_next_session', 'dnd_enabled')")
     }
 }
+
+val MIGRATION_3_4 = object : Migration(3, 4) {
+    override suspend fun migrate(connection: SQLiteConnection) {
+        connection.execSQL(
+            """
+            CREATE TABLE IF NOT EXISTS `test_log` (
+                `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                `date` TEXT NOT NULL,
+                `topicId` INTEGER NOT NULL,
+                `testCount` INTEGER NOT NULL,
+                `durationMillis` INTEGER NOT NULL,
+                `note` TEXT NOT NULL,
+                `timestamp` INTEGER NOT NULL
+            )
+            """.trimIndent()
+        )
+
+        val subjects = listOf(
+            Triple("زیست‌شناسی", 0xFF4CAF50, "CLOVER_4_LEAF"),
+            Triple("ریاضیات", 0xFF2196F3, "TRIANGLE"),
+            Triple("فیزیک", 0xFF9C27B0, "BURST"),
+            Triple("شیمی", 0xFFFF9800, "GEM"),
+            Triple("عمومی و متفرقه", 0xFF009688, "COOKIE_7_SIDED")
+        )
+
+        subjects.forEach { (name, colorVal, shapeName) ->
+            connection.execSQL(
+                """
+                INSERT OR IGNORE INTO `topic`
+                    (`name`, `color`, `shape`, `focusTime`, `shortBreakTime`, `longBreakTime`, `sessionLength`, `autostartNextSession`, `dndEnabled`)
+                VALUES (
+                    '$name',
+                    $colorVal,
+                    '$shapeName',
+                    ${45 * 60 * 1000L},
+                    ${10 * 60 * 1000L},
+                    ${15 * 60 * 1000L},
+                    4,
+                    0,
+                    0
+                )
+                """.trimIndent()
+            )
+        }
+    }
+}
+

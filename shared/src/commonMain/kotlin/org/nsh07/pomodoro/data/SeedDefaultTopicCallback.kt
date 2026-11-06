@@ -28,6 +28,7 @@ import org.nsh07.pomodoro.data.Topic.Companion.defaultTopic
 object SeedDefaultTopicCallback : RoomDatabase.Callback() {
     override suspend fun onCreate(connection: SQLiteConnection) {
         super.onCreate(connection)
+        // Default topic
         connection.execSQL(
             """
             INSERT OR IGNORE INTO `topic` 
@@ -46,5 +47,36 @@ object SeedDefaultTopicCallback : RoomDatabase.Callback() {
             )
             """.trimIndent()
         )
+
+        // Konkur & Study Subjects
+        val subjects = listOf(
+            Triple("زیست‌شناسی", 0xFF4CAF50, "CLOVER_4_LEAF"),
+            Triple("ریاضیات", 0xFF2196F3, "TRIANGLE"),
+            Triple("فیزیک", 0xFF9C27B0, "BURST"),
+            Triple("شیمی", 0xFFFF9800, "GEM"),
+            Triple("عمومی و متفرقه", 0xFF009688, "COOKIE_7_SIDED")
+        )
+
+        subjects.forEachIndexed { index, (name, colorVal, shapeName) ->
+            val id = index + 2L
+            connection.execSQL(
+                """
+                INSERT OR IGNORE INTO `topic`
+                    (`id`, `name`, `color`, `shape`, `focusTime`, `shortBreakTime`, `longBreakTime`, `sessionLength`, `autostartNextSession`, `dndEnabled`)
+                VALUES (
+                    $id,
+                    '$name',
+                    $colorVal,
+                    '$shapeName',
+                    ${45 * 60 * 1000L},
+                    ${10 * 60 * 1000L},
+                    ${15 * 60 * 1000L},
+                    4,
+                    0,
+                    0
+                )
+                """.trimIndent()
+            )
+        }
     }
 }

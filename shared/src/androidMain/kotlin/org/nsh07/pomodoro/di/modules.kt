@@ -27,10 +27,13 @@ import org.koin.plugin.module.dsl.viewModel
 import org.nsh07.pomodoro.BuildKonfig
 import org.nsh07.pomodoro.data.AndroidBackupRestoreManager
 import org.nsh07.pomodoro.data.AppDatabase
+import org.nsh07.pomodoro.data.AppTestLogRepository
 import org.nsh07.pomodoro.data.AppTopicRepository
 import org.nsh07.pomodoro.data.BackupRestoreManager
 import org.nsh07.pomodoro.data.MIGRATION_2_3
+import org.nsh07.pomodoro.data.MIGRATION_3_4
 import org.nsh07.pomodoro.data.SeedDefaultTopicCallback
+import org.nsh07.pomodoro.data.TestLogRepository
 import org.nsh07.pomodoro.data.TopicRepository
 import org.nsh07.pomodoro.ui.settingsScreen.screens.backupRestore.viewModel.BackupRestoreViewModel
 import org.nsh07.pomodoro.ui.settingsScreen.viewModel.SettingsViewModel
@@ -43,6 +46,8 @@ val dbModule = module {
     single { get<AppDatabase>().statDao() }
     single { get<AppDatabase>().topicDao() }
     single { get<AppDatabase>().systemDao() }
+    single { get<AppDatabase>().testLogDao() }
+    single<AppTestLogRepository>() bind TestLogRepository::class
 }
 
 val viewModels = module {
@@ -64,7 +69,7 @@ private fun createDatabase(context: Context): AppDatabase {
             AppDatabase::class.java,
             BuildKonfig.DATABASE_NAME
         )
-        .addMigrations(MIGRATION_2_3)
+        .addMigrations(MIGRATION_2_3, MIGRATION_3_4)
         .addCallback(SeedDefaultTopicCallback)
         .build()
 }

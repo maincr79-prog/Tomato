@@ -97,6 +97,7 @@ import org.nsh07.pomodoro.ui.statsScreen.StatsScreenRoot
 import org.nsh07.pomodoro.ui.statsScreen.viewModel.StatsViewModel
 import org.nsh07.pomodoro.ui.theme.SeededTheme
 import org.nsh07.pomodoro.ui.timerScreen.AlarmDialog
+import org.nsh07.pomodoro.ui.timerScreen.SessionCompleteDialog
 import org.nsh07.pomodoro.ui.timerScreen.TimerScreen
 import org.nsh07.pomodoro.ui.timerScreen.viewModel.TimerAction
 import org.nsh07.pomodoro.ui.timerScreen.viewModel.TimerMode
@@ -394,9 +395,15 @@ fun AppScreen(
             enter = fadeIn(motionScheme.defaultEffectsSpec()) + slideInVertically(motionScheme.slowSpatialSpec()) { -it },
             exit = fadeOut(motionScheme.defaultEffectsSpec()) + slideOutVertically(motionScheme.slowSpatialSpec()) { -it }
         ) {
-            AlarmDialog {
-                timerViewModel.onAction(TimerAction.StopAlarm)
-            }
+            SessionCompleteDialog(
+                currentTopic = currentTopic,
+                onSaveTests = { count, note ->
+                    timerViewModel.logTests(count, note)
+                },
+                onDismiss = {
+                    timerViewModel.onAction(TimerAction.StopAlarm)
+                }
+            )
         }
 
         AnimatedVisibility(

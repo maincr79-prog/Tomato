@@ -42,6 +42,7 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import org.nsh07.pomodoro.data.Stat
 import org.nsh07.pomodoro.data.StatRepository
+import org.nsh07.pomodoro.data.TestLogRepository
 import org.nsh07.pomodoro.data.TopicRepository
 import org.nsh07.pomodoro.di.AppInfo
 import org.nsh07.pomodoro.ui.Screen
@@ -61,6 +62,7 @@ class StatsViewModel(
     private val statRepository: StatRepository,
     private val topicRepository: TopicRepository,
     private val appInfo: AppInfo,
+    private val testLogRepository: TestLogRepository
 ) : ViewModel() {
     val backStack = mutableStateListOf<Screen.Stats>(Screen.Stats.Main)
 
@@ -133,6 +135,22 @@ class StatsViewModel(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5000),
             initialValue = null
+        )
+
+    val todayTotalTests: StateFlow<Int> = testLogRepository
+        .getTodayTotalTests()
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = 0
+        )
+
+    val allTimeTotalTests: StateFlow<Int> = testLogRepository
+        .getAllTimeTotalTests()
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = 0
         )
 
     private val lastWeekStatsFlow = statRepository.getLastNDaysStats(7).filter { it.isNotEmpty() }

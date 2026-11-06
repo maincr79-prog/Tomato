@@ -111,6 +111,8 @@ fun SharedTransitionScope.StatsMainScreen(
     lastMonthAverageFocusTimes: List<Long>,
     lastYearAverageFocusTimes: List<Long>,
     generateSampleData: () -> Unit,
+    todayTotalTests: Int = 0,
+    allTimeTotalTests: Int = 0,
     hoursMinutesFormat: String,
     hoursFormat: String,
     minutesFormat: String,
@@ -247,6 +249,62 @@ fun SharedTransitionScope.StatsMainScreen(
             }
 
             item { Spacer(Modifier.height(12.dp)) }
+
+            item {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp)
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .background(
+                                colorScheme.secondaryContainer,
+                                shapes.largeIncreased
+                            )
+                            .weight(1f)
+                    ) {
+                        Column(Modifier.padding(16.dp)) {
+                            Text(
+                                "تست‌های امروز",
+                                style = typography.titleMedium,
+                                color = colorScheme.onSecondaryContainer
+                            )
+                            Text(
+                                "$todayTotalTests تست",
+                                style = typography.displaySmall,
+                                color = colorScheme.onSecondaryContainer,
+                                maxLines = 1,
+                                autoSize = TextAutoSize.StepBased(maxFontSize = typography.displaySmall.fontSize)
+                            )
+                        }
+                    }
+                    Spacer(Modifier.width(8.dp))
+                    Box(
+                        modifier = Modifier
+                            .background(
+                                colorScheme.surfaceVariant,
+                                shapes.largeIncreased
+                            )
+                            .weight(1f)
+                    ) {
+                        Column(Modifier.padding(16.dp)) {
+                            Text(
+                                "مجموع کل تست‌ها",
+                                style = typography.titleMedium,
+                                color = colorScheme.onSurfaceVariant
+                            )
+                            Text(
+                                "$allTimeTotalTests تست",
+                                style = typography.displaySmall,
+                                color = colorScheme.onSurfaceVariant,
+                                maxLines = 1,
+                                autoSize = TextAutoSize.StepBased(maxFontSize = typography.displaySmall.fontSize)
+                            )
+                        }
+                    }
+                }
+            }
 
             item {
                 Column(

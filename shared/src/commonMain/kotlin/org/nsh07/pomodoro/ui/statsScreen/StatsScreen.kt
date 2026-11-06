@@ -132,6 +132,8 @@ fun StatsScreenRoot(
                         val lastWeekFocusBreakdownValues by viewModel.lastWeekFocusBreakdownValues.collectAsStateWithLifecycle()
                         val lastMonthFocusBreakdownValues by viewModel.lastMonthFocusBreakdownValues.collectAsStateWithLifecycle()
                         val lastYearFocusBreakdownValues by viewModel.lastYearFocusBreakdownValues.collectAsStateWithLifecycle()
+                        val todayTotalTests by viewModel.todayTotalTests.collectAsStateWithLifecycle()
+                        val allTimeTotalTests by viewModel.allTimeTotalTests.collectAsStateWithLifecycle()
 
                         StatsMainScreen(
                             chartsVisible = chartsVisible,
@@ -145,6 +147,8 @@ fun StatsScreenRoot(
                             lastYearSummaryChartXLabelKey = viewModel.lastYearXLabelKey,
                             todayStat = todayStat,
                             allTimeTotalFocus = allTimeTotalFocus,
+                            todayTotalTests = todayTotalTests,
+                            allTimeTotalTests = allTimeTotalTests,
                             lastWeekAverageFocusTimes = lastWeekFocusBreakdownValues.first,
                             lastMonthAverageFocusTimes = lastMonthFocusBreakdownValues.first,
                             lastYearAverageFocusTimes = lastYearFocusBreakdownValues.first,

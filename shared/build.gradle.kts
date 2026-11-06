@@ -56,6 +56,7 @@ kotlin {
         namespace = "org.nsh07.pomodoro.shared"
         compileSdk = libs.versions.app.targetSdk.get().toInt()
         minSdk = libs.versions.app.minSdk.get().toInt()
+        buildToolsVersion = "37.0.0"
 
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_17)

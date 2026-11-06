@@ -39,6 +39,7 @@ tasks.withType(Test::class) {
 android {
     namespace = "org.nsh07.pomodoro"
     compileSdk = libs.versions.app.targetSdk.get().toInt()
+    buildToolsVersion = "37.0.0"
 
     defaultConfig {
         applicationId = "org.nsh07.pomodoro"

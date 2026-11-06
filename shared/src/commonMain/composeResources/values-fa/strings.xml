@@ -1,0 +1,176 @@
+<!--
+  ~ Copyright (c) 2025-2026 Nishant Mishra
+  ~
+  ~ This file is part of Tomato - a minimalist pomodoro timer for Android.
+  ~
+  ~ Tomato is free software: you can redistribute it and/or modify it under the terms of the GNU
+  ~ General Public License as published by the Free Software Foundation, either version 3 of the
+  ~ License, or (at your option) any later version.
+  ~
+  ~ Tomato is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
+  ~ the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+  ~ Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with Tomato.
+  ~ If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="about">درباره</string>
+    <string name="alarm">زنگ</string>
+    <string name="alarm_desc">زنگ بزن وقتی تایمر تموم شد</string>
+    <string name="alarm_sound">صدای زنگ</string>
+    <string name="always_on_display">نمایش همیشه‌روشن</string>
+    <string name="always_on_display_desc">برای رفتن به حالت AOD روی صفحه ضربه بزن</string>
+    <string name="app_name">گوجه</string>
+    <string name="app_name_plus">گوجه+</string>
+    <string name="appearance">ظاهر</string>
+    <string name="auto_start_next_timer">شروع خودکار تایمر بعدی</string>
+    <string name="auto_start_next_timer_desc">تایمر بعدی رو بعد از قطع زنگ شروع کن</string>
+    <string name="back">بازگشت</string>
+    <string name="black_theme">تم سیاه</string>
+    <string name="black_theme_desc">از تم تیره خالص استفاده کن</string>
+    <string name="bmc">BuyMeACoffee</string>
+    <string name="bmc_desc">با یک کمک مالی کوچک از من حمایت کن</string>
+    <string name="break_">استراحت</string>
+    <string name="choose_color_scheme">انتخاب طرح رنگی</string>
+    <string name="choose_language">انتخاب زبان</string>
+    <string name="choose_theme">انتخاب تم</string>
+    <string name="color">رنگ</string>
+    <string name="color_scheme">طرح رنگی</string>
+    <string name="completed">تکمیل‌شده</string>
+    <string name="dark">تیره</string>
+    <string name="default_name">پیش‌فرض</string>
+    <string name="dnd">مزاحم نشو</string>
+    <string name="dnd_desc">وقتی تایمر تمرکز در حال اجراست DND رو روشن کن</string>
+    <string name="dnd_permission_message">مجوز را برای «%1$s» فعال کن</string>
+    <string name="duration">مدت</string>
+    <string name="durations">مدت‌ها</string>
+    <string name="dynamic">پویا</string>
+    <string name="dynamic_color">رنگ پویا</string>
+    <string name="dynamic_color_desc">رنگ‌های تم رو از کاغذ دیواری تطبیق بده</string>
+    <string name="exit">خروج</string>
+    <string name="focus">تمرکز</string>
+    <string name="focus_break_ratio">نسبت تمرکز به استراحت</string>
+    <string name="focus_breakdown">تفکیک تمرکز</string>
+    <string name="focus_breakdown_desc">میانگین مدت تمرکز در ساعت‌های مختلف روز</string>
+    <string name="focus_history">تاریخچه تمرکز</string>
+    <string name="focus_history_calendar">تقویم تاریخچه تمرکز</string>
+    <string name="focus_history_calendar_desc">تاریخچه تمرکز ماه گذشته. روزهای ماه قبل با رنگ متفاوتی مشخص شده‌اند. برای اطلاعات بیشتر روی تاریخ ضربه بزن.</string>
+    <string name="focus_history_desc">تفکیک تمرکز هر روز از هفته گذشته. برای اطلاعات بیشتر روی نمودار هر روز ضربه بزن.</string>
+    <string name="focus_history_heatmap">نقشه حرارتی تاریخچه تمرکز</string>
+    <string name="focus_history_heatmap_desc">تاریخچه تمرکز سال گذشته. رنگ‌های عمیق‌تر نشان‌دهنده مدت طولانی‌تر هستند. روزها بر اساس ماه گروه‌بندی شده‌اند. برای اطلاعات بیشتر روی یک روز ضربه بزن.</string>
+    <string name="focus_per_day_avg">تمرکز روزانه (میانگین)</string>
+    <string name="gap">فاصله</string>
+    <string name="get_plus">گوجه+ رو بگیر</string>
+    <string name="help_with_translation">در ترجمه گوجه کمک کن</string>
+    <string name="help_with_translation_desc">گوجه رو به زبانت ترجمه کن</string>
+    <string name="history_widget_desc">نمودار مدت تمرکز چند روز گذشته رو ببین. تعداد روزهای نمایش‌داده‌شده به اندازه ویجت بستگی داره.</string>
+    <string name="hours_and_minutes_format">%1$d ساعت %2$d دقیقه</string>
+    <string name="hours_format">%1$d ساعت</string>
+    <string name="language">زبان</string>
+    <string name="last_month">این ماه</string>
+    <string name="last_week">این هفته</string>
+    <string name="last_year">امسال</string>
+    <string name="less">کمتر</string>
+    <string name="license">مجوز</string>
+    <string name="lifetime">مادام‌العمر</string>
+    <string name="light">روشن</string>
+    <string name="long_break">استراحت طولانی</string>
+    <string name="media_volume_for_alarm">حالت هدفون</string>
+    <string name="media_volume_for_alarm_desc">برای زنگ از صدای مدیا استفاده کن</string>
+    <string name="minutes_format">%1$d دقیقه</string>
+    <string name="more">بیشتر</string>
+    <string name="more_info">اطلاعات بیشتر</string>
+    <string name="new_session">جلسه جدید</string>
+    <string name="no_data">بدون داده</string>
+    <string name="no_stats_message">هنوز هیچ آماری وجود نداره. یک تایمر شروع کن!</string>
+    <string name="notification_channel_desc">اعلان‌های پیشرفت تایمر</string>
+    <string name="notification_channel_name">تایمر</string>
+    <string name="notification_permission_message">برای نمایش پیشرفت تایمر، دسترسی به اعلان‌ها رو فعال کن</string>
+    <string name="open_settings">باز کردن تنظیمات</string>
+    <string name="pause">مکث</string>
+    <string name="play_store">Google Play</string>
+    <string name="play_store_desc">از من در Google Play حمایت کن</string>
+    <string name="pomodoros">پومودروها</string>
+    <string name="pomodoros_before_long_break">پومودرو قبل از استراحت طولانی</string>
+    <string name="progress_notification">اعلان پیشرفت</string>
+    <string name="progress_notification_desc">نمایش پیشرفت فقط برای تایمر جاری در اعلان‌ها، نه کل جلسه</string>
+    <string name="settings">تنظیمات</string>
+    <string name="shape">شکل</string>
+    <string name="short_break">استراحت کوتاه</string>
+    <string name="show_chart">نمایش نمودار</string>
+    <string name="skip">رد کردن</string>
+    <string name="skip_to_next">رفتن به بعدی</string>
+    <string name="sound">صدا</string>
+    <string name="start">شروع</string>
+    <string name="start_next">شروع بعدی</string>
+    <string name="stats">آمار</string>
+    <string name="stop">توقف</string>
+    <string name="stop_alarm">قطع زنگ</string>
+    <string name="stop_alarm_dialog_text">تایمر جاری تمام شد. برای قطع زنگ لمس کن.</string>
+    <string name="stop_alarm_question">قطع زنگ؟</string>
+    <string name="system_default">سیستم</string>
+    <string name="theme">تم</string>
+    <string name="timer">تایمر</string>
+    <string name="timer_progress">پیشرفت تایمر</string>
+    <string name="timer_reset_message">تایمر ریست شد</string>
+    <string name="timer_session_count">%1$d از %2$d</string>
+    <string name="timer_settings_reset_info">برای تغییر تنظیمات، تایمر رو ریست کن</string>
+    <string name="today">امروز</string>
+    <string name="today_widget_desc">آمار تمرکز امروز</string>
+    <string name="tomato_foss">گوجه FOSS</string>
+    <string name="tomato_foss_desc">تمام ویژگی‌ها در این نسخه آزاد هستند. اگر این اپ توی زندگیت تفاوت ایجاد کرد، لطفاً با کمک مالی از طریق %1$s از من حمایت کن.</string>
+    <string name="tomato_plus_desc">با گوجه+ بیشتر شخصی‌سازی کن</string>
+    <string name="total">کل</string>
+    <string name="undo">لغو</string>
+    <string name="up_next">بعدی</string>
+    <string name="up_next_notification">بعدی: %1$s (%2$s)</string>
+    <string name="vibrate">لرزش</string>
+    <string name="vibrate_desc">وقتی تایمر تمام شد لرزش داشته باش</string>
+    <string name="vibration_strength">شدت</string>
+    <string name="daily_focus_goal">هدف تمرکز روزانه</string>
+    <string name="milliseconds_format">%1$d میلی‌ثانیه</string>
+    <string name="backup_and_restore">پشتیبان‌گیری و بازیابی</string>
+    <string name="backup">پشتیبان‌گیری</string>
+    <string name="backup_desc">از همه آمارها و تنظیمات پشتیبان بگیر</string>
+    <string name="restore">بازیابی</string>
+    <string name="restore_desc">آمارها و تنظیمات رو بازیابی کن</string>
+    <string name="backup_dialog_desc">آمارها و تنظیماتت در یک فایل در پوشه انتخابی ذخیره میشه. بعداً میتونی این داده‌ها رو در %1$s بازیابی کنی.</string>
+    <string name="restore_dialog_desc">آمارها و تنظیماتت از فایل پشتیبان انتخابی بازیابی میشه. اپ باید بعد از تکمیل بازیابی ری‌استارت بشه. &lt;b&gt;تمام داده‌های موجود پاک میشن و این عمل قابل بازگشت نیست.&lt;/b&gt;</string>
+    <string name="choose_folder">انتخاب پوشه</string>
+    <string name="choose_file">انتخاب فایل</string>
+    <string name="restart_app">ری‌استارت اپ</string>
+    <string name="vibration_pattern">الگوی لرزش</string>
+    <string name="infinite">بی‌نهایت</string>
+    <string name="infinite_focus">تمرکز بی‌نهایت</string>
+    <string name="settings_infinite_focus_tip">برای فعال کردن حالت تمرکز بی‌نهایت روی ساعت تایمر نگه دار</string>
+    <string name="cancel">لغو</string>
+    <string name="advanced">پیشرفته</string>
+    <string name="topics">موضوعات</string>
+    <string name="create_new_topic">موضوع جدید</string>
+    <string name="topic_settings">تنظیمات موضوع</string>
+    <string name="topic_name">نام</string>
+    <string name="topic_name_taken">موضوعی با این نام قبلاً وجود داره</string>
+    <string name="topic_name_empty">نام موضوع نمیتونه خالی باشه</string>
+    <string name="add_topic">افزودن موضوع</string>
+    <string name="next">بعدی</string>
+    <string name="delete_topic">حذف موضوع</string>
+    <string name="delete_topic_and_stats">حذف موضوع و آمارها</string>
+    <string name="delete_topic_dialog_title">حذف موضوع؟</string>
+    <string name="delete_topic_dialog_text">این عمل قابل بازگشت نیست. آمارهای مرتبط با این موضوع به موضوع پیش‌فرض (%1$s) منتقل میشن. اختیاری میتونی آمارهای مرتبط با این موضوع رو هم حذف کنی.</string>
+    <string name="edit_topic">ویرایش موضوع</string>
+    <string name="edit_topic_desc">نام، رنگ و شکل</string>
+    <string name="topic_summary_format">%1$s / %2$s / %3$s، %4$d تایمر</string>
+    <string name="red">قرمز</string>
+    <string name="rose">گلی</string>
+    <string name="purple">بنفش</string>
+    <string name="indigo">نیلی</string>
+    <string name="blue">آبی</string>
+    <string name="cyan">فیروزه‌ای</string>
+    <string name="teal">کبود</string>
+    <string name="green">سبز</string>
+    <string name="chartreuse">زرد-سبز</string>
+    <string name="yellow">زرد</string>
+    <string name="orange">نارنجی</string>
+</resources>

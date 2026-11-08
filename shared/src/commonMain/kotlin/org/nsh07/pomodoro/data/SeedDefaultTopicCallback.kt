@@ -49,15 +49,17 @@ object SeedDefaultTopicCallback : RoomDatabase.Callback() {
         )
 
         // Konkur & Study Subjects
+        // Colors use correct Compose Color.value.toLong() format:
+        // (argbInt.toLong() and 0xFFFFFFFFL) shl 32 converted to signed Long
         val subjects = listOf(
-            Triple("زیست‌شناسی", 0xFF4CAF50, "CLOVER_4_LEAF"),
-            Triple("ریاضیات", 0xFF2196F3, "TRIANGLE"),
-            Triple("فیزیک", 0xFF9C27B0, "BURST"),
-            Triple("شیمی", 0xFFFF9800, "GEM"),
-            Triple("عمومی و متفرقه", 0xFF009688, "COOKIE_7_SIDED")
+            Triple("زیست‌شناسی", -50472737675673600L,  "CLOVER_4_LEAF"), // 0xFF4CAF50
+            Triple("ریاضیات",    -62602949385256960L,  "TRIANGLE"),      // 0xFF2196F3
+            Triple("فیزیک",      -28103860803338240L,  "BURST"),         // 0xFF9C27B0
+            Triple("شیمی",       -114349209288704L,    "GEM"),           // 0xFFFF9800
+            Triple("عمومی و متفرقه", -71892083178209280L, "COOKIE_7_SIDED") // 0xFF009688
         )
 
-        subjects.forEachIndexed { index, (name, colorVal, shapeName) ->
+        subjects.forEachIndexed { index, (name, colorLong, shapeName) ->
             val id = index + 2L
             connection.execSQL(
                 """
@@ -66,7 +68,7 @@ object SeedDefaultTopicCallback : RoomDatabase.Callback() {
                 VALUES (
                     $id,
                     '$name',
-                    $colorVal,
+                    $colorLong,
                     '$shapeName',
                     ${45 * 60 * 1000L},
                     ${10 * 60 * 1000L},

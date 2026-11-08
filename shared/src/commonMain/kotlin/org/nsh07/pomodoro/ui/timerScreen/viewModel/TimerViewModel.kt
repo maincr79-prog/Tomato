@@ -61,6 +61,37 @@ class TimerViewModel(
         (uiState.totalTime.toFloat() - remainingTime) / uiState.totalTime
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 0f)
 
+    /** Today's focus time, daily goal, tests and streak — shown in the glass "Today" card. */
+    val today: StateFlow<TodaySummary> = combine(
+        statRepository.getTodayStat(),
+        statRepository.getLastNDaysStats(366),
+        testLogRepository.getTodayTotalTests(),
+        stateRepository.settingsState
+    ) { todayStat, days, tests, settings ->
+        TodaySummary(
+            focusMillis = todayStat?.totalFocusTime() ?: 0L,
+            goalMillis = settings.focusGoal,
+            tests = tests,
+            streak = streakOf(days)
+        )
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), TodaySummary())
+
+    /**
+     * Days in a row with some focus time. Today only counts once it has focus, so an
+     * unfinished today does not break yesterday's streak.
+     */
+    private fun streakOf(daysNewestFirst: List<Stat>): Int {
+        val focusDays = daysNewestFirst.filter { it.totalFocusTime() > 0 }.map { it.date }.toSet()
+        var day = LocalDate.now()
+        if (day !in focusDays) day = day.minusDays(1)
+        var streak = 0
+        while (day in focusDays) {
+            streak++
+            day = day.minusDays(1)
+        }
+        return streak
+    }
+
     init {
         viewModelScope.launch(Dispatchers.IO) {
             val topicIds = topicRepository.getTopicIds()
@@ -125,4 +156,15 @@ class TimerViewModel(
             }
         }
     }
+}
+/** Numbers for the "Today" card on the timer screen. */
+data class TodaySummary(
+    val focusMillis: Long = 0L,
+    val goalMillis: Long = 0L,
+    val tests: Int = 0,
+    val streak: Int = 0
+) {
+    /** 0..1 progress towards the daily goal (0 when no goal is set). */
+    val goalProgress: Float
+        get() = if (goalMillis <= 0) 0f else (focusMillis.toFloat() / goalMillis).coerceIn(0f, 1f)
 }

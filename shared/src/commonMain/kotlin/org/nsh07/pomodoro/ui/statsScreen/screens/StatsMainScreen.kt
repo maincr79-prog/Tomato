@@ -69,6 +69,7 @@ import org.nsh07.pomodoro.data.Stat
 import org.nsh07.pomodoro.di.AppInfo
 import org.nsh07.pomodoro.ui.Screen
 import org.nsh07.pomodoro.ui.mergePaddingValues
+import org.nsh07.pomodoro.ui.withExtraBottom
 import org.nsh07.pomodoro.ui.statsScreen.components.TimeColumnChart
 import org.nsh07.pomodoro.ui.statsScreen.components.TimeLineChart
 import org.nsh07.pomodoro.ui.statsScreen.components.sharedBoundsReveal
@@ -80,6 +81,9 @@ import org.nsh07.pomodoro.ui.theme.TomatoShapeDefaults.cardShape
 import org.nsh07.pomodoro.ui.theme.TomatoShapeDefaults.middleListItemShape
 import org.nsh07.pomodoro.ui.theme.TomatoShapeDefaults.topListItemShape
 import org.nsh07.pomodoro.utils.millisecondsToHoursMinutes
+import tomato.shared.generated.resources.today_tests_title
+import tomato.shared.generated.resources.total_tests_title
+import tomato.shared.generated.resources.tests_count
 import tomato.shared.generated.resources.Res
 import tomato.shared.generated.resources.break_
 import tomato.shared.generated.resources.focus
@@ -165,7 +169,7 @@ fun SharedTransitionScope.StatsMainScreen(
         },
         modifier = modifier.nestedScroll(scrollBehavior.nestedScrollConnection)
     ) { innerPadding ->
-        val insets = mergePaddingValues(innerPadding, contentPadding)
+        val insets = mergePaddingValues(innerPadding, contentPadding).withExtraBottom(24.dp)
         LazyColumn(
             contentPadding = insets,
             verticalArrangement = Arrangement.spacedBy(2.dp),
@@ -251,27 +255,23 @@ fun SharedTransitionScope.StatsMainScreen(
             item { Spacer(Modifier.height(12.dp)) }
 
             item {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp)
-                ) {
+                Row(modifier = Modifier.fillMaxWidth()) {
                     Box(
                         modifier = Modifier
                             .background(
-                                colorScheme.secondaryContainer,
+                                colorScheme.primaryContainer.copy(alpha = 0.6f),
                                 shapes.largeIncreased
                             )
                             .weight(1f)
                     ) {
                         Column(Modifier.padding(16.dp)) {
                             Text(
-                                "تست‌های امروز",
+                                stringResource(Res.string.today_tests_title),
                                 style = typography.titleMedium,
                                 color = colorScheme.onSecondaryContainer
                             )
                             Text(
-                                "$todayTotalTests تست",
+                                stringResource(Res.string.tests_count, todayTotalTests),
                                 style = typography.displaySmall,
                                 color = colorScheme.onSecondaryContainer,
                                 maxLines = 1,
@@ -283,19 +283,19 @@ fun SharedTransitionScope.StatsMainScreen(
                     Box(
                         modifier = Modifier
                             .background(
-                                colorScheme.surfaceVariant,
+                                colorScheme.tertiaryContainer.copy(alpha = 0.6f),
                                 shapes.largeIncreased
                             )
                             .weight(1f)
                     ) {
                         Column(Modifier.padding(16.dp)) {
                             Text(
-                                "مجموع کل تست‌ها",
+                                stringResource(Res.string.total_tests_title),
                                 style = typography.titleMedium,
                                 color = colorScheme.onSurfaceVariant
                             )
                             Text(
-                                "$allTimeTotalTests تست",
+                                stringResource(Res.string.tests_count, allTimeTotalTests),
                                 style = typography.displaySmall,
                                 color = colorScheme.onSurfaceVariant,
                                 maxLines = 1,

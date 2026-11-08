@@ -32,3 +32,6 @@
 }
 
 -dontobfuscate
+# Keep Room-generated databases (WorkManager uses androidx.room, the app uses room3) — R8 stripped WorkDatabase_Impl
+-keep class * extends androidx.room.RoomDatabase { <init>(); }
+-keep class * extends androidx.room3.RoomDatabase { <init>(); }

@@ -74,6 +74,7 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.nsh07.pomodoro.data.Stat
 import org.nsh07.pomodoro.ui.mergePaddingValues
+import org.nsh07.pomodoro.ui.withExtraBottom
 import org.nsh07.pomodoro.ui.statsScreen.components.FocusBreakRatioVisualization
 import org.nsh07.pomodoro.ui.statsScreen.components.FocusBreakdownChart
 import org.nsh07.pomodoro.ui.statsScreen.components.HEATMAP_CELL_GAP
@@ -194,7 +195,7 @@ fun SharedTransitionScope.LastYearScreen(
                 clipShape = bottomListItemShape
             )
     ) { innerPadding ->
-        val insets = mergePaddingValues(innerPadding, contentPadding)
+        val insets = mergePaddingValues(innerPadding, contentPadding).withExtraBottom(24.dp)
         Box(
             contentAlignment = Alignment.Center,
             modifier = Modifier.fillMaxSize()

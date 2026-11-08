@@ -17,13 +17,14 @@
 
 package org.nsh07.pomodoro.data
 
-import androidx.compose.ui.graphics.Color
 import androidx.room3.migration.Migration
 import androidx.sqlite.SQLiteConnection
 import androidx.sqlite.execSQL
 import org.nsh07.pomodoro.data.Topic.Companion.defaultTopic
 
 val MIGRATION_2_3 = object : Migration(2, 3) {
+    // Color.White.value.toLong() = -4294967296L
+    private val colorWhiteLong = -4294967296L
     override suspend fun migrate(connection: SQLiteConnection) {
         connection.execSQL(
             """
@@ -52,7 +53,7 @@ val MIGRATION_2_3 = object : Migration(2, 3) {
             VALUES (
                 ${defaultTopic.id},
                 '${defaultTopic.name}',
-                ${Color.White.value.toLong()},
+                $colorWhiteLong,
                 '${defaultTopic.shape.name}',
                 COALESCE((SELECT value FROM int_preference WHERE key = 'focus_time'), 1500000),
                 COALESCE((SELECT value FROM int_preference WHERE key = 'short_break_time'), 300000),
@@ -99,6 +100,17 @@ val MIGRATION_2_3 = object : Migration(2, 3) {
     }
 }
 
+// Correct color.value.toLong() representations for ARGB colors:
+// These are the values that Color(ARGB).value.toLong() produces in Compose Multiplatform
+// Computed as: (argbInt.toLong() and 0xFFFFFFFFL) shl 32 converted to signed Long
+private object KonkurColors {
+    const val GREEN_BIOLOGY  = -50472737675673600L  // 0xFF4CAF50
+    const val BLUE_MATH      = -62602949385256960L  // 0xFF2196F3
+    const val PURPLE_PHYSICS = -28103860803338240L  // 0xFF9C27B0
+    const val ORANGE_CHEM    = -114349209288704L    // 0xFFFF9800
+    const val TEAL_GENERAL   = -71892083178209280L  // 0xFF009688
+}
+
 val MIGRATION_3_4 = object : Migration(3, 4) {
     override suspend fun migrate(connection: SQLiteConnection) {
         connection.execSQL(
@@ -116,21 +128,21 @@ val MIGRATION_3_4 = object : Migration(3, 4) {
         )
 
         val subjects = listOf(
-            Triple("زیست‌شناسی", 0xFF4CAF50, "CLOVER_4_LEAF"),
-            Triple("ریاضیات", 0xFF2196F3, "TRIANGLE"),
-            Triple("فیزیک", 0xFF9C27B0, "BURST"),
-            Triple("شیمی", 0xFFFF9800, "GEM"),
-            Triple("عمومی و متفرقه", 0xFF009688, "COOKIE_7_SIDED")
+            Triple("زیست‌شناسی", KonkurColors.GREEN_BIOLOGY,  "CLOVER_4_LEAF"),
+            Triple("ریاضیات",    KonkurColors.BLUE_MATH,      "TRIANGLE"),
+            Triple("فیزیک",      KonkurColors.PURPLE_PHYSICS, "BURST"),
+            Triple("شیمی",       KonkurColors.ORANGE_CHEM,    "GEM"),
+            Triple("عمومی و متفرقه", KonkurColors.TEAL_GENERAL, "COOKIE_7_SIDED")
         )
 
-        subjects.forEach { (name, colorVal, shapeName) ->
+        subjects.forEach { (name, colorLong, shapeName) ->
             connection.execSQL(
                 """
                 INSERT OR IGNORE INTO `topic`
                     (`name`, `color`, `shape`, `focusTime`, `shortBreakTime`, `longBreakTime`, `sessionLength`, `autostartNextSession`, `dndEnabled`)
                 VALUES (
                     '$name',
-                    $colorVal,
+                    $colorLong,
                     '$shapeName',
                     ${45 * 60 * 1000L},
                     ${10 * 60 * 1000L},
@@ -140,6 +152,26 @@ val MIGRATION_3_4 = object : Migration(3, 4) {
                     0
                 )
                 """.trimIndent()
+            )
+        }
+    }
+}
+
+/** Fixes incorrect color values stored by MIGRATION_3_4 and SeedDefaultTopicCallback (v4). */
+val MIGRATION_4_5 = object : Migration(4, 5) {
+    override suspend fun migrate(connection: SQLiteConnection) {
+        // Update color values for konkur subjects that were stored with wrong (Int-signed) values
+        // The incorrect values were the raw negative Int literals instead of proper Compose ULong values
+        val colorFixes = mapOf(
+            "زیست‌شناسی" to KonkurColors.GREEN_BIOLOGY,
+            "ریاضیات"    to KonkurColors.BLUE_MATH,
+            "فیزیک"      to KonkurColors.PURPLE_PHYSICS,
+            "شیمی"       to KonkurColors.ORANGE_CHEM,
+            "عمومی و متفرقه" to KonkurColors.TEAL_GENERAL
+        )
+        colorFixes.forEach { (name, correctColor) ->
+            connection.execSQL(
+                "UPDATE `topic` SET `color` = $correctColor WHERE `name` = '$name'"
             )
         }
     }

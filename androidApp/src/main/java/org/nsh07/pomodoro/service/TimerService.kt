@@ -43,7 +43,6 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import org.koin.android.ext.android.inject
 import org.koin.core.component.KoinComponent
 import org.nsh07.pomodoro.R
@@ -107,7 +106,8 @@ class TimerService : Service(), KoinComponent {
         isRunning = false
         updateQSTile()
         job.cancel()
-        runBlocking(Dispatchers.IO) { timerManager.saveTimeToDb() }
+        // Save in the background instead of freezing the main thread (was runBlocking → jank/ANR)
+        CoroutineScope(SupervisorJob() + Dispatchers.IO).launch { timerManager.saveTimeToDb() }
         setDoNotDisturb(false)
         notificationManager.cancel(1)
         try {

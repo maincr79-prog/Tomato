@@ -51,6 +51,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        // Let the glass background show behind the 3-button nav bar (no grey/white strip)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            window.isNavigationBarContrastEnforced = false
+        }
 
         activityCallbacks.activityTurnScreenOn = {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {

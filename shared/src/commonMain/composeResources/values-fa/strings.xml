@@ -173,4 +173,12 @@
     <string name="chartreuse">زرد-سبز</string>
     <string name="yellow">زرد</string>
     <string name="orange">نارنجی</string>
+    <string name="today_focus">امروز</string>
+    <string name="focus_streak">🔥 %1$d روز پیاپی</string>
+    <string name="tests_today">📝 %1$d تست</string>
+    <string name="set_goal_hint">هدف روزانه را در تنظیمات تعیین کن</string>
+    <string name="goal_reached">به هدف رسیدی ✨</string>
+    <string name="today_tests_title">تست‌های امروز</string>
+    <string name="total_tests_title">مجموع کل تست‌ها</string>
+    <string name="tests_count">%1$d تست</string>
 </resources>

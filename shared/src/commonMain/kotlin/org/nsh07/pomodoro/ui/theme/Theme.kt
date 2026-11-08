@@ -155,7 +155,7 @@ fun SeededTheme(
     )
 
     val scheme = animateColorScheme(
-        if (seedColor == Color.White) appScheme else seededScheme
+        if (seedColor == Color.White) appScheme else seededScheme.glassify()
     )
 
     MaterialExpressiveTheme(colorScheme = scheme, content = content)

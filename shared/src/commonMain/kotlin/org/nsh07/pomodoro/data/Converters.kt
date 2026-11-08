@@ -39,8 +39,19 @@ object ComposeColorConverter {
         return color.value.toLong()
     }
 
+    /**
+     * Crash-proof decoding. Older builds stored raw ARGB ints (e.g. 0xFF2196F3) instead of
+     * Compose's packed ULong. Compose reads the low 6 bits as a color-space id, so a value
+     * like 0xFF2196F3 → id 51 (doesn't exist) → crash whenever that topic is shown.
+     */
     @ColumnTypeConverter
     fun toColor(value: Long): Color {
-        return Color(value.toULong())
+        // Legacy: whole value fits in 32 bits → it's a plain ARGB int.
+        if (value ushr 32 == 0L) return Color(value.toInt())
+        val packed = value.toULong()
+        // Packed sRGB (color-space id 0) is the only format the app ever writes.
+        if ((packed and 0x3FUL) == 0UL) return Color(packed)
+        // Anything else is corrupt — fall back to "no seed" instead of crashing.
+        return runCatching { Color(packed).also { it.colorSpace } }.getOrDefault(Color.White)
     }
 }

@@ -195,3 +195,14 @@ expect fun Modifier.androidSystemGestureExclusion(): Modifier
 expect fun htmlToAnnotatedString(html: String): AnnotatedString
 
 expect fun Modifier.hideCursor(): Modifier
+/** Same padding plus [extra] at the bottom, so the last item can scroll clear of the floating nav bar. */
+@Composable
+fun PaddingValues.withExtraBottom(extra: androidx.compose.ui.unit.Dp): PaddingValues {
+    val dir = LocalLayoutDirection.current
+    return PaddingValues(
+        top = calculateTopPadding(),
+        bottom = calculateBottomPadding() + extra,
+        start = calculateStartPadding(dir),
+        end = calculateEndPadding(dir)
+    )
+}

@@ -44,7 +44,7 @@ actual fun TomatoTheme(
 
     val dynamicColorScheme = rememberDynamicColorScheme(
         seedColor = when (seedColor) {
-            Color.White -> colorScheme.primary
+            Color.White -> GlassBlue
             else -> seedColor
         },
         isDark = darkTheme,
@@ -52,9 +52,8 @@ actual fun TomatoTheme(
         isAmoled = blackTheme && darkTheme
     )
 
-    val scheme =
-        if (seedColor == Color.White && !(blackTheme && darkTheme)) colorScheme
-        else dynamicColorScheme
+    // Calm blue glass theme: always seeded (blue by default), then made translucent
+    val scheme = dynamicColorScheme.glassify()
 
     CompositionLocalProvider(
         LocalAppFonts provides getAppFonts(),
@@ -67,7 +66,6 @@ actual fun TomatoTheme(
             colorScheme = scheme,
             typography = typography(),
             motionScheme = MotionScheme.expressive(),
-            content = content
-        )
+        ) { GlassBackground(dark = darkTheme, content = content) }
     }
 }

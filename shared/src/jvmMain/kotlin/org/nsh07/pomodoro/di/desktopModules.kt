@@ -45,6 +45,7 @@ import org.nsh07.pomodoro.data.BackupRestoreManager
 import org.nsh07.pomodoro.data.DesktopBackupRestoreManager
 import org.nsh07.pomodoro.data.MIGRATION_2_3
 import org.nsh07.pomodoro.data.MIGRATION_3_4
+import org.nsh07.pomodoro.data.MIGRATION_4_5
 import org.nsh07.pomodoro.data.PreferenceRepository
 import org.nsh07.pomodoro.data.SeedDefaultTopicCallback
 import org.nsh07.pomodoro.data.StatRepository
@@ -118,7 +119,7 @@ private fun createDatabase(): AppDatabase {
         .databaseBuilder<AppDatabase>(name = dbFile.absolutePath)
         .setDriver(BundledSQLiteDriver())
         .setQueryCoroutineContext(Dispatchers.IO)
-        .addMigrations(MIGRATION_2_3, MIGRATION_3_4)
+        .addMigrations(MIGRATION_2_3, MIGRATION_3_4, MIGRATION_4_5)
         .addCallback(SeedDefaultTopicCallback)
         .build()
 }

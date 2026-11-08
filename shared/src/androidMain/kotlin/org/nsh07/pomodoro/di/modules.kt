@@ -32,6 +32,7 @@ import org.nsh07.pomodoro.data.AppTopicRepository
 import org.nsh07.pomodoro.data.BackupRestoreManager
 import org.nsh07.pomodoro.data.MIGRATION_2_3
 import org.nsh07.pomodoro.data.MIGRATION_3_4
+import org.nsh07.pomodoro.data.MIGRATION_4_5
 import org.nsh07.pomodoro.data.SeedDefaultTopicCallback
 import org.nsh07.pomodoro.data.TestLogRepository
 import org.nsh07.pomodoro.data.TopicRepository
@@ -69,7 +70,7 @@ private fun createDatabase(context: Context): AppDatabase {
             AppDatabase::class.java,
             BuildKonfig.DATABASE_NAME
         )
-        .addMigrations(MIGRATION_2_3, MIGRATION_3_4)
+        .addMigrations(MIGRATION_2_3, MIGRATION_3_4, MIGRATION_4_5)
         .addCallback(SeedDefaultTopicCallback)
         .build()
 }

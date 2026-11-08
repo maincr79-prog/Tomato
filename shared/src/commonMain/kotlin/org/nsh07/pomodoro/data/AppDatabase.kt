@@ -24,7 +24,7 @@ import androidx.room3.RoomDatabase
 
 @Database(
     entities = [IntPreference::class, BooleanPreference::class, StringPreference::class, Stat::class, Topic::class, TestLog::class],
-    version = 4,
+    version = 5,
     autoMigrations = [
         AutoMigration(from = 1, to = 2)
     ]

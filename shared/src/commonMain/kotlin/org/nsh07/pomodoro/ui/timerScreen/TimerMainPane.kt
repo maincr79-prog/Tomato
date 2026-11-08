@@ -49,6 +49,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.TextAutoSize
 import androidx.compose.material3.ButtonGroup
@@ -120,6 +121,8 @@ import org.nsh07.pomodoro.ui.rememberRequestNotificationPermissionCallback
 import org.nsh07.pomodoro.ui.settingsScreen.screens.sampleTopics
 import org.nsh07.pomodoro.ui.theme.LocalAppFonts
 import org.nsh07.pomodoro.ui.theme.TomatoTheme
+import org.nsh07.pomodoro.ui.theme.glass
+import org.nsh07.pomodoro.ui.timerScreen.viewModel.TodaySummary
 import org.nsh07.pomodoro.ui.timerScreen.viewModel.TimerAction
 import org.nsh07.pomodoro.ui.timerScreen.viewModel.TimerMode
 import org.nsh07.pomodoro.ui.timerScreen.viewModel.TimerState
@@ -162,7 +165,8 @@ fun SharedTransitionScope.TimerMainPane(
     onAction: (TimerAction) -> Unit,
     onAddTopic: () -> Unit,
     onOpenTopicSettings: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    today: TodaySummary = TodaySummary()
 ) {
     val isPlus = LocalIsPlus.current
 
@@ -372,6 +376,13 @@ fun SharedTransitionScope.TimerMainPane(
                             .widthIn(max = 350.dp)
                             .aspectRatio(1f),
                     ) {
+                        // Frosted glass disc inside the progress ring (iOS-style depth)
+                        Box(
+                            Modifier
+                                .fillMaxWidth(0.74f)
+                                .aspectRatio(1f)
+                                .glass(CircleShape, elevation = 18.dp)
+                        )
                         this@Column.AnimatedVisibility(
                             !timerState.infiniteFocus,
                             enter = fadeIn(motionScheme.defaultEffectsSpec()) +
@@ -465,8 +476,7 @@ fun SharedTransitionScope.TimerMainPane(
                                     verticalAlignment = Alignment.CenterVertically,
                                     modifier = Modifier
                                         .padding(bottom = 6.dp)
-                                        .clip(RoundedCornerShape(16.dp))
-                                        .background(colorScheme.surfaceContainerHighest.copy(alpha = 0.85f))
+                                        .glass(RoundedCornerShape(16.dp), elevation = 2.dp)
                                         .padding(horizontal = 14.dp, vertical = 4.dp)
                                 ) {
                                     Text(
@@ -545,6 +555,8 @@ fun SharedTransitionScope.TimerMainPane(
                                     },
                                     checked = timerState.timerRunning,
                                     colors = IconButtonDefaults.filledIconToggleButtonColors(
+                                        containerColor = color,
+                                        contentColor = onColor,
                                         checkedContainerColor = color,
                                         checkedContentColor = onColor
                                     ),
@@ -709,7 +721,15 @@ fun SharedTransitionScope.TimerMainPane(
 
             if (!widthExpanded)
                 item {
-                    Column(horizontalAlignment = CenterHorizontally) {
+                    Column(
+                        horizontalAlignment = CenterHorizontally,
+                        modifier = Modifier
+                            .widthIn(max = 420.dp)
+                            .fillMaxWidth()
+                            .padding(horizontal = 24.dp)
+                            .glass(RoundedCornerShape(28.dp), elevation = 6.dp)
+                            .padding(vertical = 12.dp)
+                    ) {
                         Text(
                             stringResource(Res.string.up_next),
                             style = typography.titleSmall
@@ -769,6 +789,10 @@ fun SharedTransitionScope.TimerMainPane(
                 }
 
             item { Spacer(Modifier.height(16.dp)) }
+
+            item { TodayCard(today) }
+
+            item { Spacer(Modifier.height(24.dp)) }
         }
     }
 }

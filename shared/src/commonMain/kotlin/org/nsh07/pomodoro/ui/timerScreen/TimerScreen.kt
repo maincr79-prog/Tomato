@@ -17,6 +17,8 @@
 
 package org.nsh07.pomodoro.ui.timerScreen
 
+import org.nsh07.pomodoro.ui.timerScreen.viewModel.TodaySummary
+
 import androidx.compose.animation.SharedTransitionLayout
 import androidx.compose.animation.SharedTransitionScope
 import androidx.compose.foundation.layout.PaddingValues
@@ -57,7 +59,8 @@ fun SharedTransitionScope.TimerScreen(
     onAction: (TimerAction) -> Unit,
     onAddTopic: () -> Unit,
     onOpenTopicSettings: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    today: TodaySummary = TodaySummary()
 ) {
     val navigator = rememberSupportingPaneScaffoldNavigator(
         adaptStrategies = SupportingPaneScaffoldDefaults.adaptStrategies(supportingPaneAdaptStrategy = AdaptStrategy.Hide)
@@ -79,7 +82,8 @@ fun SharedTransitionScope.TimerScreen(
                         onAction = onAction,
                         onAddTopic = onAddTopic,
                         onOpenTopicSettings = onOpenTopicSettings,
-                        modifier = modifier
+                        modifier = modifier,
+                        today = today
                     )
                 }
             },

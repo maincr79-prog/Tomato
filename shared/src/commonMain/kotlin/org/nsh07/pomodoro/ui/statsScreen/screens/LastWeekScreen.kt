@@ -70,6 +70,7 @@ import com.patrykandpatrick.vico.compose.common.data.ExtraStore
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.nsh07.pomodoro.ui.mergePaddingValues
+import org.nsh07.pomodoro.ui.withExtraBottom
 import org.nsh07.pomodoro.ui.statsScreen.components.FocusBreakRatioVisualization
 import org.nsh07.pomodoro.ui.statsScreen.components.FocusBreakdownChart
 import org.nsh07.pomodoro.ui.statsScreen.components.HorizontalStackedBar
@@ -184,7 +185,7 @@ fun SharedTransitionScope.LastWeekScreen(
                 clipShape = topListItemShape
             )
     ) { innerPadding ->
-        val insets = mergePaddingValues(innerPadding, contentPadding)
+        val insets = mergePaddingValues(innerPadding, contentPadding).withExtraBottom(24.dp)
         Box(
             contentAlignment = Alignment.Center,
             modifier = Modifier.fillMaxSize()

@@ -23,6 +23,7 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.expandHorizontally
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
 import androidx.compose.animation.shrinkHorizontally
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
@@ -74,6 +75,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.text.style.TextOverflow
@@ -96,6 +98,7 @@ import org.nsh07.pomodoro.ui.settingsScreen.viewModel.SettingsViewModel
 import org.nsh07.pomodoro.ui.statsScreen.StatsScreenRoot
 import org.nsh07.pomodoro.ui.statsScreen.viewModel.StatsViewModel
 import org.nsh07.pomodoro.ui.theme.SeededTheme
+import org.nsh07.pomodoro.ui.theme.glass
 import org.nsh07.pomodoro.ui.timerScreen.AlarmDialog
 import org.nsh07.pomodoro.ui.timerScreen.SessionCompleteDialog
 import org.nsh07.pomodoro.ui.timerScreen.TimerScreen
@@ -129,6 +132,7 @@ fun AppScreen(
     val progress by timerViewModel.progress.collectAsStateWithLifecycle()
     val currentTopic by timerViewModel.currentTopic.collectAsStateWithLifecycle()
     val isPlus by settingsViewModel.isPlus.collectAsStateWithLifecycle()
+    val today by timerViewModel.today.collectAsStateWithLifecycle()
 
     val layoutDirection = LocalLayoutDirection.current
     val motionScheme = motionScheme
@@ -219,8 +223,8 @@ fun AppScreen(
                                 expanded = true,
                                 scrollBehavior = toolbarScrollBehavior,
                                 colors = FloatingToolbarDefaults.vibrantFloatingToolbarColors(
-                                    toolbarContainerColor = primaryContainer,
-                                    toolbarContentColor = onPrimaryContainer
+                                    toolbarContainerColor = Color.Transparent,
+                                    toolbarContentColor = colorScheme.onSurface
                                 ),
                                 modifier = Modifier
                                     .padding(
@@ -229,6 +233,7 @@ fun AppScreen(
                                                 + ScreenOffset
                                     )
                                     .zIndex(1f)
+                                    .glass(CircleShape, elevation = 16.dp)
                             ) {
                                 mainScreens.fastForEach { item ->
                                     val selected by remember { derivedStateOf { backStack.lastOrNull() == item.route } }
@@ -255,8 +260,8 @@ fun AppScreen(
                                                 { item.onNavigateHome() }
                                             },
                                             colors = ToggleButtonDefaults.colors(
-                                                containerColor = primaryContainer,
-                                                contentColor = onPrimaryContainer,
+                                                containerColor = Color.Transparent,
+                                                contentColor = colorScheme.onSurface,
                                                 checkedContainerColor = primary,
                                                 checkedContentColor = onPrimary
                                             ),
@@ -303,13 +308,16 @@ fun AppScreen(
                 NavDisplay(
                     backStack = backStack,
                     onBack = backStack::onBack,
+                    // iOS-like: new page fades in while gently growing from 96%
                     transitionSpec = {
-                        fadeIn(motionScheme.defaultEffectsSpec())
-                            .togetherWith(fadeOut(motionScheme.defaultEffectsSpec()))
+                        (fadeIn(motionScheme.defaultEffectsSpec()) +
+                                scaleIn(motionScheme.defaultSpatialSpec(), initialScale = 0.96f))
+                            .togetherWith(fadeOut(motionScheme.fastEffectsSpec()))
                     },
                     popTransitionSpec = {
-                        fadeIn(motionScheme.defaultEffectsSpec())
-                            .togetherWith(fadeOut(motionScheme.defaultEffectsSpec()))
+                        (fadeIn(motionScheme.defaultEffectsSpec()) +
+                                scaleIn(motionScheme.defaultSpatialSpec(), initialScale = 1.04f))
+                            .togetherWith(fadeOut(motionScheme.fastEffectsSpec()))
                     },
                     predictivePopTransitionSpec = {
                         fadeIn(motionScheme.defaultEffectsSpec())
@@ -337,6 +345,7 @@ fun AppScreen(
                                 progress = { progress },
                                 onAction = timerViewModel::onAction,
                                 onAddTopic = { showCreateTopicSheet = true },
+                                today = today,
                                 onOpenTopicSettings = {
                                     if (backStack.size < 2) backStack.add(Screen.Settings.Main)
                                     else backStack[1] = Screen.Settings.Main

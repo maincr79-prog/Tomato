@@ -75,10 +75,10 @@
     <string name="sound">Som</string>
     <string name="dnd">Não perturbar</string>
     <string name="dnd_desc">Ative o modo Não Perturbe ao usar o cronômetro de foco</string>
-    <string name="get_plus">Obtenha o Tomato+</string>
+    <string name="get_plus">Obtenha o Focus Glass+</string>
     <string name="dynamic_color">Cor dinâmica</string>
     <string name="dynamic_color_desc">Adapte as cores do tema à partir do seu papel de parede</string>
-    <string name="tomato_foss" translatable="false">Tomato FOSS</string>
+    <string name="tomato_foss" translatable="false">Focus Glass FOSS</string>
     <string name="tomato_foss_desc">Todos os recursos estão desbloqueados nesta versão. Se meu app fez a diferença na sua vida, considere me apoiar fazendo uma doação em %1$s.</string>
     <string name="language">Idioma</string>
     <string name="choose_language">Escolher idioma</string>

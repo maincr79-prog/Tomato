@@ -1,5 +1,6 @@
 <!--
   ~ Copyright (c) 2025-2026 Nishant Mishra
+  ~ Copyright (c) 2026 Mohammad (Focus Glass modifications)
   ~
   ~ This file is part of Tomato - a minimalist pomodoro timer for Android.
   ~
@@ -22,16 +23,16 @@
     <string name="alarm_sound">Alarm sound</string>
     <string name="always_on_display">Always On Display</string>
     <string name="always_on_display_desc">Tap anywhere when viewing the timer to switch to AOD mode</string>
-    <string name="app_name">Tomato</string>
-    <string name="app_name_plus">Tomato+</string>
+    <string name="app_name">Focus Glass</string>
+    <string name="app_name_plus">Focus Glass+</string>
     <string name="appearance">Appearance</string>
     <string name="auto_start_next_timer">Auto start next timer</string>
     <string name="auto_start_next_timer_desc">Start next timer after stopping an alarm</string>
     <string name="back">Back</string>
     <string name="black_theme">Black theme</string>
     <string name="black_theme_desc">Use a pure black dark theme</string>
-    <string name="bmc">BuyMeACoffee</string>
-    <string name="bmc_desc">Support me with a small donation</string>
+    <string name="bmc">Telegram</string>
+    <string name="bmc_desc">Contact and support the developer</string>
     <string name="break_">Break</string>
     <string name="choose_color_scheme">Choose color scheme</string>
     <string name="choose_language">Choose language</string>
@@ -62,9 +63,9 @@
     <string name="focus_history_heatmap_desc">Focus history of the past year. Deeper colors represent a longer duration. Days are grouped by month. Tap on a day for more info.</string>
     <string name="focus_per_day_avg">focus per day (avg)</string>
     <string name="gap">Gap</string>
-    <string name="get_plus">Get Tomato+</string>
-    <string name="help_with_translation">Help translate Tomato</string>
-    <string name="help_with_translation_desc">Translate Tomato into your language</string>
+    <string name="get_plus">Get Focus Glass+</string>
+    <string name="help_with_translation">Send feedback</string>
+    <string name="help_with_translation_desc">Report bugs or suggest features on Telegram</string>
     <string name="history_widget_desc">See a chart of the focus durations of the past few days. The number of days displayed depends on the size of the widget.</string>
     <string name="hours_and_minutes_format">%1$dh %2$dm</string>
     <string name="hours_format">%1$dh</string>
@@ -85,8 +86,8 @@
     <string name="more_info">More info</string>
     <string name="now_bar">Now Bar</string>
     <string name="ok">OK</string>
-    <string name="open_tomato">Open Tomato</string>
-    <string name="quit_tomato">Quit Tomato</string>
+    <string name="open_tomato">Open Focus Glass</string>
+    <string name="quit_tomato">Quit Focus Glass</string>
     <string name="pause">Pause</string>
     <string name="paused">Paused</string>
     <string name="play">Play</string>
@@ -127,9 +128,9 @@
     <string name="timer_settings_reset_info">Reset the timer to change settings</string>
     <string name="today">Today</string>
     <string name="today_widget_desc">Today\u0027s focus stats</string>
-    <string name="tomato_foss">Tomato FOSS</string>
-    <string name="tomato_foss_desc">All features are unlocked in this version. If my app made a difference in your life, please consider supporting me by donating on %1$s.</string>
-    <string name="tomato_plus_desc">Customize further with Tomato+</string>
+    <string name="tomato_foss">Focus Glass FOSS</string>
+    <string name="tomato_foss_desc">All features are unlocked in this version. If this app helps you, you can support the developer on %1$s.</string>
+    <string name="tomato_plus_desc">Customize further with Focus Glass+</string>
     <string name="total">total</string>
     <string name="undo">Undo</string>
     <string name="up_next">Up next</string>

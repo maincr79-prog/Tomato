@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2025-2026 Nishant Mishra
+ * Copyright (c) 2026 Mohammad (Focus Glass modifications)
  *
  * This file is part of Tomato - a minimalist pomodoro timer for Android.
  *
@@ -72,14 +73,14 @@ fun TomatoPlusPaywallDialog(
             )
             Spacer(Modifier.height(8.dp))
             Text(
-                stringResource(R.string.tomato_foss_desc, "BuyMeACoffee"),
+                stringResource(R.string.tomato_foss_desc, "Telegram"),
                 textAlign = TextAlign.Center,
                 color = colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(horizontal = 24.dp)
             )
             Spacer(Modifier.height(16.dp))
             Button(
-                onClick = { uriHandler.openUri("https://coff.ee/nsh07") },
+                onClick = { uriHandler.openUri("https://t.me/editoramx") },
                 shapes = ButtonDefaults.shapes()
             ) {
                 Text(stringResource(R.string.bmc))

@@ -3,7 +3,7 @@ name: Bug report
 about: Create a report of a bug or crash
 title: "[BUG] <enter your title here>"
 labels: bug, needs-triage
-assignees: nsh07
+assignees: mohammad802
 
 ---
 

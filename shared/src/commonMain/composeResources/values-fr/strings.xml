@@ -78,19 +78,19 @@
     <string name="dynamic_color">Couleur dynamique</string>
     <string name="dynamic_color_desc">Adapter les couleurs à celles de votre fond d\u0027écran</string>
     <string name="tomato_foss_desc">Toutes les fonctionnalités sont déverrouillées dans cette version. Si mon application a fait une différence dans votre vie, veuillez envisager de me soutenir en faisant un don sur %1$s.</string>
-    <string name="app_name_plus" translatable="false">Tomato+</string>
-    <string name="get_plus">Obtenir Tomato+</string>
-    <string name="tomato_foss" translatable="false">Tomato FOSS</string>
+    <string name="app_name_plus" translatable="false">Focus Glass+</string>
+    <string name="get_plus">Obtenir Focus Glass+</string>
+    <string name="tomato_foss" translatable="false">Focus Glass FOSS</string>
     <string name="language">Langue</string>
     <string name="choose_language">Choisissez la langue</string>
     <string name="rate_on_google_play">Noter sur Google Play</string>
     <string name="selected">Selectionné</string>
-    <string name="help_with_translation">Aidez à traduire Tomato</string>
+    <string name="help_with_translation">Aidez à traduire Focus Glass</string>
     <string name="timer_settings_reset_info">Réinitialiser le timer pour pouvoir changer les paramètres</string>
     <string name="bmc_desc">Soutenez-moi avec un petit don</string>
-    <string name="tomato_plus_desc">Personnalisez plus avec Tomato+</string>
+    <string name="tomato_plus_desc">Personnalisez plus avec Focus Glass+</string>
     <string name="about">À propos</string>
-    <string name="help_with_translation_desc">Traduire Tomato dans votre langue</string>
+    <string name="help_with_translation_desc">Traduire Focus Glass dans votre langue</string>
     <string name="rate_on_google_play_desc">Vous avez aimé l\u0027appli ? Écrivez un avis !</string>
     <string name="license">Licence</string>
     <string name="media_volume_for_alarm">Mode casque</string>
@@ -146,7 +146,7 @@
     <string name="infinite">Infini</string>
     <string name="infinite_focus">Concentration infinie</string>
     <string name="settings_infinite_focus_tip">Appuyez longuement sur l\u0027horloge du minuteur pour activer le mode de concentration infinie</string>
-    <string name="open_tomato">Ouvrir Tomato</string>
-    <string name="quit_tomato">Quitter Tomato</string>
+    <string name="open_tomato">Ouvrir Focus Glass</string>
+    <string name="quit_tomato">Quitter Focus Glass</string>
     <string name="advanced">Avancé</string>
 </resources>

@@ -1,6 +1,6 @@
-<i>Tomato</i> は、Material 3 Expressive を基調としたミニマルな Android 向けポモドーロタイマーです。
+<i>Focus Glass</i> は、Material 3 Expressive を基調としたミニマルな Android 向けポモドーロタイマーです。
 
-Tomato は完全に、永遠に、無料でありオープンソースでもあります。 https://github.com/nsh07/Tomato で、ソースコードを見たり、バグを報告したり、機能を提案したりできます。
+Focus Glass は完全に、永遠に、無料でありオープンソースでもあります。 https://github.com/mohammad802/pomodoro で、ソースコードを見たり、バグを報告したり、機能を提案したりできます。
 
 <b>主な機能:</b>
 - 最新の Material 3 Expressive ガイドラインに基づいたシンプルでミニマルなUI

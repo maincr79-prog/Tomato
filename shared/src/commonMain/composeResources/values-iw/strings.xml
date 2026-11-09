@@ -61,7 +61,7 @@
     <string name="dynamic_color">צבע דינמי</string>
     <string name="language">שפה</string>
     <string name="choose_language">בחירת שפה</string>
-    <string name="help_with_translation">עזרה בתרגום Tomato</string>
+    <string name="help_with_translation">עזרה בתרגום Focus Glass</string>
     <string name="about">על אודות</string>
     <string name="auto_start_next_timer">התחלה אוטומטית של קוצב הזמן הבא</string>
     <string name="auto_start_next_timer_desc">התחלת קוצב הזמן הבא לאחר עצירת התראה</string>
@@ -73,7 +73,7 @@
     <string name="durations">משכי זמן</string>
     <string name="focus_break_ratio">יחס זמן של מיקוד־הפסקה</string>
     <string name="focus_history">היסטוריית מיקוד</string>
-    <string name="help_with_translation_desc">תרגום Tomato לעברית</string>
+    <string name="help_with_translation_desc">תרגום Focus Glass לעברית</string>
     <string name="hours_and_minutes_format">%1$d שע׳ %2$d דק׳</string>
     <string name="hours_format">%1$d שע׳</string>
     <string name="license">רישיון</string>
@@ -121,13 +121,13 @@
     <string name="dnd_permission_message">הפעלת הרשאה עבור %1$s</string>
     <string name="dynamic_color_desc">השאלת צבעי העיצוב מהרקע שלך</string>
     <string name="focus_breakdown_desc">משכי זמן ממוצעים של מיקוד במהלך שעות שונות ביום</string>
-    <string name="get_plus">רכישת Tomato+</string>
+    <string name="get_plus">רכישת Focus Glass+</string>
     <string name="less">פחות</string>
     <string name="pomodoro_info">סבב הוא רצף פרקי זמן של פומודורו, הכוללים פרקי זמן למיקוד, פרקי זמן להפסקה, ופרקי זמן של הפסקה ארוכה. ההפסקה האחרונה של הסבב היא תמיד ארוכה.</string>
     <string name="secure_aod">‏AOD מאובטח</string>
     <string name="secure_aod_desc">נעילה אוטומטית של המכשיר לאחר פרק זמן מסוים, תוך כדי השארת ה־AOD גלוי</string>
     <string name="session_length_desc">פרקי זמן למיקוד בסבב אחד: %1$d</string>
-    <string name="tomato_plus_desc">התאמה אישית נרחבת יותר עם Tomato+</string>
+    <string name="tomato_plus_desc">התאמה אישית נרחבת יותר עם Focus Glass+</string>
     <string name="total">סה״כ</string>
     <string name="backup_dialog_desc">הסטטיסטיקה וההגדרות שלך יישמרו בקובץ בתיקייה שבחרת. ניתן לשחזר את הנתונים האלה מאוחר יותר דרך %1$s.</string>
     <string name="restore_dialog_desc">הסטטיסטיקה וההגדרות שלך ישוחזרו מקובץ הגיבוי שבחרת. על היישום להיפתח מחדש בעת השלמת השחזור. <b>כל הנתונים הקיימים יימחקו, ולא יהיה ניתן להחזירם.</b></string>
@@ -144,6 +144,6 @@
     <string name="cancel">ביטול</string>
     <string name="focus_history_heatmap">מפת היסטוריית מיקוד</string>
     <string name="history_widget_desc">צפייה בטבלה של משכי הזמן של המיקוד בימים קודמים. מספר הימים שיוצגו תלוי בגודל הווידג׳ט.</string>
-    <string name="open_tomato">פתיחת Tomato</string>
-    <string name="quit_tomato">יציאה מ־Tomato</string>
+    <string name="open_tomato">פתיחת Focus Glass</string>
+    <string name="quit_tomato">יציאה מ־Focus Glass</string>
 </resources>

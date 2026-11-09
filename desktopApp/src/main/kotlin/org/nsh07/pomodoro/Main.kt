@@ -28,7 +28,7 @@ import org.nsh07.pomodoro.di.servicesModule
 import org.nsh07.pomodoro.di.viewModels
 
 fun main() = application {
-    FileKit.init(appId = "org.nsh07.pomodoro")
+    FileKit.init(appId = "io.github.mohammad802.pomodoro")
 
     startKoin {
         modules(

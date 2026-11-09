@@ -31,8 +31,8 @@
     <string name="focus_history_calendar">lipu pali pi tenpo pini</string>
     <string name="focus_per_day_avg">tenpo pali lon tenpo suno</string>
     <string name="gap">awen</string>
-    <string name="get_plus">o kama jo e Tomato+</string>
-    <string name="help_with_translation">o ante toki e Tomato</string>
+    <string name="get_plus">o kama jo e Focus Glass+</string>
+    <string name="help_with_translation">o ante toki e Focus Glass</string>
     <string name="help_with_translation_desc">o ante toki e ilo Tomoto tawa toki sina</string>
     <string name="hours_and_minutes_format">%1$dh %2$dm</string>
     <string name="hours_format">%1$dh</string>
@@ -80,7 +80,7 @@
     <string name="today">tenpo suno ni</string>
     <string name="today_widget_desc">nanpa pi tenpo suno ni</string>
     <string name="tomato_foss_desc">sina ken ale lon ilo ni. ilo li pona tawa sina la, o pana e mani kepeken ilo %1$s.</string>
-    <string name="tomato_plus_desc">o ante ale lon Tomato+</string>
+    <string name="tomato_plus_desc">o ante ale lon Focus Glass+</string>
     <string name="total">ale</string>
     <string name="undo">o weka</string>
     <string name="up_next">tenpo kama</string>
@@ -129,6 +129,6 @@
     <string name="secure_aod_desc">o ken e lape ilo (taso AOD li lon sitelen ilo lon lape)</string>
     <string name="session_length_desc">tenpo pali lon kulupu pomotolo: %1$d</string>
     <string name="pomodoro_info">kulupu pomotolo li jo e tenpo pali tu tu, e tenpo awen tu tu. tenpo awen pini li suli.</string>
-    <string name="open_tomato">o open e ilo Tomato</string>
-    <string name="quit_tomato">o pini e ilo Tomato</string>
+    <string name="open_tomato">o open e ilo Focus Glass</string>
+    <string name="quit_tomato">o pini e ilo Focus Glass</string>
 </resources>

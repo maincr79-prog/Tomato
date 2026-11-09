@@ -50,7 +50,7 @@
     <string name="focus_per_day_avg">하루 평균 집중도</string>
     <string name="gap">틈</string>
     <string name="help_with_translation">번역을 도와주세요</string>
-    <string name="help_with_translation_desc">Tomato를 당신의 언어로 번역하세요</string>
+    <string name="help_with_translation_desc">Focus Glass를 당신의 언어로 번역하세요</string>
     <string name="history_widget_desc">지난 며칠간의 집중 시간 차트를 확인하세요. 표시되는 일수는 위젯 크기에 따라 다릅니다.</string>
     <string name="language">언어</string>
     <string name="last_month">이번달</string>
@@ -97,7 +97,7 @@
     <string name="focus_breakdown_desc">하루 시간대별 평균 집중 시간</string>
     <string name="focus_history">집중 기록</string>
     <string name="focus_history_calendar">집중 기록 캘린더</string>
-    <string name="get_plus">Tomato+ 구매하기</string>
+    <string name="get_plus">Focus Glass+ 구매하기</string>
     <string name="hours_and_minutes_format">%1$dh %2$dm</string>
     <string name="hours_format">%1$dh</string>
     <string name="license">라이선스</string>
@@ -124,7 +124,7 @@
     <string name="timer_session_count">%1$d 의 %2$d</string>
     <string name="today_widget_desc">오늘 집중 통계</string>
     <string name="tomato_foss_desc">잠겨있는 기능은 없습니다. 제 앱이 여러분의 삶에 도움이 되었다면, %1$s에서 후원해 주세요.</string>
-    <string name="tomato_plus_desc">Tomato+으로 더 많은 기능을 사용해 보세요</string>
+    <string name="tomato_plus_desc">Focus Glass+으로 더 많은 기능을 사용해 보세요</string>
     <string name="total">총합</string>
     <string name="undo">실행 취소</string>
     <string name="up_next">다음</string>

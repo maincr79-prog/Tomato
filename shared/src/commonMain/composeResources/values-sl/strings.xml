@@ -42,9 +42,9 @@
     <string name="focus_history_heatmap_desc">Zgodovina koncentracije v zadnjem letu. Temnejše barve predstavljajo daljše trajanje. Dnevi so razporejeni po mesecih. Dotakni se dneva za več informacij.</string>
     <string name="focus_per_day_avg">koncentracija na dan (povprečje)</string>
     <string name="gap">Premor</string>
-    <string name="get_plus">Pridobi Tomato+</string>
-    <string name="help_with_translation">Pomagaj prevesti Tomato</string>
-    <string name="help_with_translation_desc">Prevedi Tomato v tvoj jezik</string>
+    <string name="get_plus">Pridobi Focus Glass+</string>
+    <string name="help_with_translation">Pomagaj prevesti Focus Glass</string>
+    <string name="help_with_translation_desc">Prevedi Focus Glass v tvoj jezik</string>
     <string name="history_widget_desc">Prikaži graf trajanja koncentracije zadnjih dni. Število prikazanih dni je odvisno od velikosti pripomočka.</string>
     <string name="language">Jezik</string>
     <string name="last_month">Ta mesec</string>
@@ -60,8 +60,8 @@
     <string name="more">Več</string>
     <string name="more_info">Več informacij</string>
     <string name="ok">V redu</string>
-    <string name="open_tomato">Odpri Tomato</string>
-    <string name="quit_tomato">Zapri Tomato</string>
+    <string name="open_tomato">Odpri Focus Glass</string>
+    <string name="quit_tomato">Zapri Focus Glass</string>
     <string name="pause">Premor</string>
     <string name="paused">V premoru</string>
     <string name="play">Začni</string>
@@ -106,7 +106,7 @@
     <string name="today">Danes</string>
     <string name="today_widget_desc">Današnja statistika koncentracije</string>
     <string name="tomato_foss_desc">Vse funkcije so odklenjene v tej različici. Če je moja aplikacija vplivala na vaše življenje, vas prosim, razmislite o podpori z donacijo na %1$s.</string>
-    <string name="tomato_plus_desc">Prilagodi še več s Tomato+</string>
+    <string name="tomato_plus_desc">Prilagodi še več s Focus Glass+</string>
     <string name="total">skupaj</string>
     <string name="undo">Razveljavi</string>
     <string name="up_next">Naslednje</string>

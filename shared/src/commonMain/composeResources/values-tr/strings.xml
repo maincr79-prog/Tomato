@@ -75,25 +75,25 @@
     <string name="sound">Ses</string>
     <string name="dnd">Rahatsız Etmeyin</string>
     <string name="dnd_desc">Odaklanma sayacı çalışırken RE\u0027yi aç</string>
-    <string name="get_plus">Tomato+ edin</string>
+    <string name="get_plus">Focus Glass+ edin</string>
     <string name="dynamic_color">Dinamik renk</string>
     <string name="dynamic_color_desc">Tema renklerini duvar kağıdınızdan alın</string>
-    <string name="tomato_foss" translatable="false">Tomato FOSS</string>
+    <string name="tomato_foss" translatable="false">Focus Glass FOSS</string>
     <string name="tomato_foss_desc">Bu sürümde tüm özelliklerin kilidi açılmıştır. Uygulamam hayatınızda bir fark yarattıysa, lütfen %1$s üzerinden bağış yaparak beni desteklemeyi düşünün.</string>
     <string name="language">Dil</string>
     <string name="choose_language">Dil seç</string>
     <string name="rate_on_google_play">Google Play\u0027de değerlendir</string>
     <string name="selected">Seçilen</string>
-    <string name="help_with_translation">Tomato\u0027nun çevirisine yardım edin</string>
+    <string name="help_with_translation">Focus Glass\u0027nun çevirisine yardım edin</string>
     <string name="timer_settings_reset_info">Ayarları değiştirmek için zamanlayıcıyı sıfırlayın</string>
     <string name="hours_and_minutes_format">%1$dsa %2$ddk</string>
     <string name="hours_format">%1$dsa</string>
     <string name="minutes_format">%1$ddk</string>
     <string name="about">Hakkında</string>
-    <string name="help_with_translation_desc">Tomato\u0027yu kendi dilinize çevirin</string>
+    <string name="help_with_translation_desc">Focus Glass\u0027yu kendi dilinize çevirin</string>
     <string name="rate_on_google_play_desc">Uygulamayı beğendinizmi? Bir yorum bırakın!</string>
     <string name="bmc_desc">Beni küçük bir bağışla destekleyin</string>
-    <string name="tomato_plus_desc">Tomato+ ile daha fazla özelleştirin</string>
+    <string name="tomato_plus_desc">Focus Glass+ ile daha fazla özelleştirin</string>
     <string name="license">Lisans</string>
     <string name="media_volume_for_alarm">Kulaklık modu</string>
     <string name="media_volume_for_alarm_desc">Sadece kulaklıktan oynatır. Eğer kulaklık devre dışı ise alarmı direkt medya sesi düzeyinde hoparlörden oynatır.</string>
@@ -145,8 +145,8 @@
     <string name="infinite_focus">Sonsuz odak</string>
     <string name="settings_infinite_focus_tip">Sonsuz odak modunu açmak için zamanlayıcı saatine uzun basın</string>
     <string name="cancel">İptal</string>
-    <string name="open_tomato">Tomato\u0027yu Aç</string>
-    <string name="quit_tomato">Tomato\u0027dan Çık</string>
+    <string name="open_tomato">Focus Glass\u0027yu Aç</string>
+    <string name="quit_tomato">Focus Glass\u0027dan Çık</string>
     <string name="advanced">Gelişmiş</string>
     <string name="topics">Kategoriler</string>
     <string name="create_new_topic">Yeni kategori</string>

@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2025-2026 Nishant Mishra
+ * Copyright (c) 2026 Mohammad (Focus Glass modifications)
  *
  * This file is part of Tomato - a minimalist pomodoro timer for Android.
  *
@@ -42,7 +43,7 @@ android {
     buildToolsVersion = "37.0.0"
 
     defaultConfig {
-        applicationId = "org.nsh07.pomodoro"
+        applicationId = "io.github.mohammad802.pomodoro"
 
         minSdk = libs.versions.app.minSdk.get().toInt()
         targetSdk = libs.versions.app.targetSdk.get().toInt()

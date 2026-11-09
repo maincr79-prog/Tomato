@@ -3,7 +3,7 @@ name: Feature request
 about: Suggest a new feature
 title: "[FEATURE] <enter your title here>"
 labels: enhancement, needs-triage
-assignees: nsh07
+assignees: mohammad802
 
 ---
 

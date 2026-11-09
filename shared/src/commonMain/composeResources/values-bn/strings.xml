@@ -40,8 +40,8 @@
     <string name="exit">বের হন</string>
     <string name="focus">মনোযোগ দিন</string>
     <string name="focus_per_day_avg">দৈনিক ফোকাস (গড়ে)</string>
-    <string name="get_plus">Tomato+ নিন</string>
-    <string name="help_with_translation">Tomato অনুবাদ করতে সাহায্য করুন</string>
+    <string name="get_plus">Focus Glass+ নিন</string>
+    <string name="help_with_translation">Focus Glass অনুবাদ করতে সাহায্য করুন</string>
     <string name="language">ভাষা</string>
     <string name="last_month">গত মাস</string>
     <string name="last_week">গত সপ্তাহ</string>
@@ -86,10 +86,10 @@
     <string name="vibrate">ভাইব্রেশন</string>
     <string name="vibrate_desc">টাইমার শেষ হলে ভাইব্রেট করবে</string>
     <string name="about">এবাউট</string>
-    <string name="help_with_translation_desc">আপনার ভাষায় Tomato অনুবাদ করুন</string>
+    <string name="help_with_translation_desc">আপনার ভাষায় Focus Glass অনুবাদ করুন</string>
     <string name="rate_on_google_play_desc">অ্যাপটি পছন্দ হয়েছে? রিভিউ দিন!</string>
     <string name="bmc_desc">ছোট অনুদান দিয়ে সাহায্য করুন</string>
-    <string name="tomato_plus_desc">Tomato+ দিয়ে আরো কাস্টোমাইজ করুন</string>
+    <string name="tomato_plus_desc">Focus Glass+ দিয়ে আরো কাস্টোমাইজ করুন</string>
     <string name="license">লাইসেন্স</string>
     <string name="media_volume_for_alarm">হেডফোন মোড</string>
     <string name="media_volume_for_alarm_desc">শুধুমাত্র হেডফোন এ বাজে। হেডফোন ডিসকানেক্টেড হলে, স্পিকার দিয়ে এলার্ম বাজে মিডিয়া ভলিউম এ</string>

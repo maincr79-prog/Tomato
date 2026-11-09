@@ -1,6 +1,6 @@
-<i>Tomato</i> és un temporitzador Pomodoro minimalista per a Android basat en Material 3 Expressive.
+<i>Focus Glass</i> és un temporitzador Pomodoro minimalista per a Android basat en Material 3 Expressive.
 
-Tomato és completament gratuït i de codi obert, per sempre. Podeu trobar el codi font i informar d'errors o suggerir funcions a https://github.com/nsh07/Tomato
+Focus Glass és completament gratuït i de codi obert, per sempre. Podeu trobar el codi font i informar d'errors o suggerir funcions a https://github.com/mohammad802/pomodoro
 
 <b>Característiques:</b>
 - Interfície d'usuari senzilla i minimalista basada en les darreres directrius de Material 3 Expressive

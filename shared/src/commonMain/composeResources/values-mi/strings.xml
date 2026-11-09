@@ -58,7 +58,7 @@
     <string name="stats">Ngā tatauranga</string>
     <string name="stop">Whakamutua</string>
     <string name="stop_alarm">Whakamutua te wawā</string>
-    <string name="help_with_translation">Tautokona te whakawhiti reo ki Tomato</string>
+    <string name="help_with_translation">Tautokona te whakawhiti reo ki Focus Glass</string>
     <string name="timer_settings_reset_info">Whakahoua te kaitaki ki te tīni tautuhinga</string>
     <string name="stop_alarm_dialog_text">Kua mutu te huringa. Pāngia te mata kia mutu te wawā.</string>
     <string name="stop_alarm_question">Whakamutua te wāwā?</string>
@@ -77,7 +77,7 @@
     <string name="sound">Oro</string>
     <string name="dnd">Kaua e Whakakotiti</string>
     <string name="dnd_desc">Whakatūria a Kaua e Whakakotiti i te wā Arotahi</string>
-    <string name="get_plus">Tikiakegia Tomato+</string>
+    <string name="get_plus">Tikiakegia Focus Glass+</string>
     <string name="dynamic_color">Tae whitiwhiti</string>
     <string name="dynamic_color_desc">Whāia ngā tae o tāu mata waea</string>
     <string name="tomato_foss_desc">Kua wātea ngā āheinga katoa ki tēnei putanga. Mēnā he mea whai āwhina i tō ao, tēnā, whakaarohia te tuku koha ki %1$s.</string>
@@ -89,8 +89,8 @@
     <string name="hours_format">%1$dh</string>
     <string name="minutes_format">%1$dm</string>
     <string name="about">Mō mātou</string>
-    <string name="help_with_translation_desc">Whakawhitia a Tomato ki tō reo</string>
+    <string name="help_with_translation_desc">Whakawhitia a Focus Glass ki tō reo</string>
     <string name="rate_on_google_play_desc">Pai te taupāngā? Tuhia āu whakaaro!</string>
     <string name="bmc_desc">Tautokona au ki te paku koha</string>
-    <string name="tomato_plus_desc">He whakahāngaitanga anō ki Tomato+</string>
+    <string name="tomato_plus_desc">He whakahāngaitanga anō ki Focus Glass+</string>
 </resources>

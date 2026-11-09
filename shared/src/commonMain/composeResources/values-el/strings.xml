@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright (c) 2025-2026 Nishant Mishra
+  ~ Copyright (c) 2026 Mohammad (Focus Glass modifications)
   ~
   ~ This file is part of Tomato - a minimalist pomodoro timer for Android.
   ~
@@ -40,8 +41,8 @@
     <string name="exit">Έξοδος</string>
     <string name="focus">Εστίαση</string>
     <string name="focus_per_day_avg">εστίαση ανά ημέρα (μο)</string>
-    <string name="get_plus">Απόκτησε το Tomato+</string>
-    <string name="help_with_translation">Βοήθησε στη μετάφραση του Tomato</string>
+    <string name="get_plus">Απόκτησε το Focus Glass+</string>
+    <string name="help_with_translation">Βοήθησε στη μετάφραση του Focus Glass</string>
     <string name="hours_and_minutes_format">%1$dώ %2$dλ</string>
     <string name="hours_format">%1$dώ</string>
     <string name="language">Γλώσσα</string>
@@ -89,10 +90,10 @@
     <string name="vibrate">Δόνηση</string>
     <string name="vibrate_desc">Δόνηση όταν ένα χρονόμετρο ολοκληρώνεται</string>
     <string name="about">Σχετικά</string>
-    <string name="help_with_translation_desc">Μετέφρασε το Tomato στη γλώσσα σου</string>
+    <string name="help_with_translation_desc">Μετέφρασε το Focus Glass στη γλώσσα σου</string>
     <string name="rate_on_google_play_desc">Σου αρέσει η εφαρμογή; Αξιολόγησε!</string>
     <string name="bmc_desc">Υποστήριξέ με, με μια μικρή δωρεά</string>
-    <string name="tomato_plus_desc">Προσάρμοσε περαιτέρω με το Tomato+</string>
+    <string name="tomato_plus_desc">Προσάρμοσε περαιτέρω με το Focus Glass+</string>
     <string name="license">Άδεια</string>
     <string name="media_volume_for_alarm">Λειτουργία ακουστικών</string>
     <string name="media_volume_for_alarm_desc">Παίζει μόνο σε ακουστικά. Εάν τα ακουστικά αποσυνδεθούν, το κουδούνισμα παίζει μέσω του ηχείου σε ένταση πολυμέσου.</string>
@@ -140,8 +141,8 @@
     <string name="choose_file">Επιλέξτε αρχείο</string>
     <string name="restart_app">Επανεκκίνηση εφαρμογής</string>
     <string name="vibration_pattern">Μοτίβο δόνησης</string>
-    <string name="open_tomato">Άνοιγμα Tomato</string>
-    <string name="quit_tomato">Έξοδος Tomato</string>
+    <string name="open_tomato">Άνοιγμα Focus Glass</string>
+    <string name="quit_tomato">Έξοδος Focus Glass</string>
     <string name="infinite">Άπειρο</string>
     <string name="infinite_focus">Άπειρη εστίαση</string>
     <string name="cancel">Ακύρωση</string>

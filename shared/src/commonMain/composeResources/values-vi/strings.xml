@@ -55,9 +55,9 @@
     <string name="focus_history_desc">Phân tích tập trung của từng ngày trong tuần vừa qua. Nhấn vào đồ thị của một ngày để xem chi tiết.</string>
     <string name="focus_history_heatmap">Bản đồ nhiệt lịch sử tập trung</string>
     <string name="gap">Ngắt</string>
-    <string name="get_plus">Đăng ký Tomato+</string>
-    <string name="help_with_translation">Giúp dịch Tomato</string>
-    <string name="help_with_translation_desc">Dịch Tomato sang ngôn ngữ của bạn</string>
+    <string name="get_plus">Đăng ký Focus Glass+</string>
+    <string name="help_with_translation">Giúp dịch Focus Glass</string>
+    <string name="help_with_translation_desc">Dịch Focus Glass sang ngôn ngữ của bạn</string>
     <string name="focus_per_day_avg">trên ngày (t.bình)</string>
     <string name="language">Ngôn ngữ</string>
     <string name="last_month">Tháng này</string>
@@ -71,8 +71,8 @@
     <string name="more">Thêm</string>
     <string name="more_info">Thêm chi tiết</string>
     <string name="ok">OK</string>
-    <string name="open_tomato">Mở Tomato</string>
-    <string name="quit_tomato">Thoát Tomato</string>
+    <string name="open_tomato">Mở Focus Glass</string>
+    <string name="quit_tomato">Thoát Focus Glass</string>
     <string name="pause">Tạm dừng</string>
     <string name="paused">Đã tạm dừng</string>
     <string name="rate_on_google_play">Đánh giá trên Google Play</string>
@@ -109,7 +109,7 @@
     <string name="today">Hôm nay</string>
     <string name="today_widget_desc">Thống kê tập trung hôm nay</string>
     <string name="tomato_foss_desc">Tất cả tính năng được mở khoá trong phiên bản này. Nếu ứng dụng của mình tạo nên sự khác biệt cho cuộc sống của bạn, xin hãy cân nhắc hỗ trợ mình bằng cách quyên góp trên %1$s.</string>
-    <string name="tomato_plus_desc">Tùy chỉnh sâu hơn với Tomato+</string>
+    <string name="tomato_plus_desc">Tùy chỉnh sâu hơn với Focus Glass+</string>
     <string name="total">tổng</string>
     <string name="undo">Hoàn tác</string>
     <string name="up_next">Tiếp theo</string>

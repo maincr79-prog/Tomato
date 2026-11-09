@@ -1,5 +1,6 @@
 <!--
   ~ Copyright (c) 2025-2026 Nishant Mishra
+  ~ Copyright (c) 2026 Mohammad (Focus Glass modifications)
   ~
   ~ This file is part of Tomato - a minimalist pomodoro timer for Android.
   ~
@@ -22,16 +23,16 @@
     <string name="alarm_sound">صدای زنگ</string>
     <string name="always_on_display">نمایش همیشه‌روشن</string>
     <string name="always_on_display_desc">برای رفتن به حالت AOD روی صفحه ضربه بزن</string>
-    <string name="app_name">گوجه</string>
-    <string name="app_name_plus">گوجه+</string>
+    <string name="app_name">فوکوس</string>
+    <string name="app_name_plus">فوکوس+</string>
     <string name="appearance">ظاهر</string>
     <string name="auto_start_next_timer">شروع خودکار تایمر بعدی</string>
     <string name="auto_start_next_timer_desc">تایمر بعدی رو بعد از قطع زنگ شروع کن</string>
     <string name="back">بازگشت</string>
     <string name="black_theme">تم سیاه</string>
     <string name="black_theme_desc">از تم تیره خالص استفاده کن</string>
-    <string name="bmc">BuyMeACoffee</string>
-    <string name="bmc_desc">با یک کمک مالی کوچک از من حمایت کن</string>
+    <string name="bmc">تلگرام</string>
+    <string name="bmc_desc">ارتباط با سازنده و حمایت از او</string>
     <string name="break_">استراحت</string>
     <string name="choose_color_scheme">انتخاب طرح رنگی</string>
     <string name="choose_language">انتخاب زبان</string>
@@ -62,9 +63,9 @@
     <string name="focus_history_heatmap_desc">تاریخچه تمرکز سال گذشته. رنگ‌های عمیق‌تر نشان‌دهنده مدت طولانی‌تر هستند. روزها بر اساس ماه گروه‌بندی شده‌اند. برای اطلاعات بیشتر روی یک روز ضربه بزن.</string>
     <string name="focus_per_day_avg">تمرکز روزانه (میانگین)</string>
     <string name="gap">فاصله</string>
-    <string name="get_plus">گوجه+ رو بگیر</string>
-    <string name="help_with_translation">در ترجمه گوجه کمک کن</string>
-    <string name="help_with_translation_desc">گوجه رو به زبانت ترجمه کن</string>
+    <string name="get_plus">فوکوس+ رو بگیر</string>
+    <string name="help_with_translation">ارسال بازخورد</string>
+    <string name="help_with_translation_desc">گزارش باگ یا پیشنهاد قابلیت در تلگرام</string>
     <string name="history_widget_desc">نمودار مدت تمرکز چند روز گذشته رو ببین. تعداد روزهای نمایش‌داده‌شده به اندازه ویجت بستگی داره.</string>
     <string name="hours_and_minutes_format">%1$d ساعت %2$d دقیقه</string>
     <string name="hours_format">%1$d ساعت</string>
@@ -119,9 +120,9 @@
     <string name="timer_settings_reset_info">برای تغییر تنظیمات، تایمر رو ریست کن</string>
     <string name="today">امروز</string>
     <string name="today_widget_desc">آمار تمرکز امروز</string>
-    <string name="tomato_foss">گوجه FOSS</string>
-    <string name="tomato_foss_desc">تمام ویژگی‌ها در این نسخه آزاد هستند. اگر این اپ توی زندگیت تفاوت ایجاد کرد، لطفاً با کمک مالی از طریق %1$s از من حمایت کن.</string>
-    <string name="tomato_plus_desc">با گوجه+ بیشتر شخصی‌سازی کن</string>
+    <string name="tomato_foss">فوکوس FOSS</string>
+    <string name="tomato_foss_desc">همه‌ی قابلیت‌ها در این نسخه باز هستند. اگر این برنامه به کارت اومد، می‌تونی از طریق %1$s از سازنده حمایت کنی.</string>
+    <string name="tomato_plus_desc">با فوکوس+ بیشتر شخصی‌سازی کن</string>
     <string name="total">کل</string>
     <string name="undo">لغو</string>
     <string name="up_next">بعدی</string>

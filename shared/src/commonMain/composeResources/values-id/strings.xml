@@ -73,10 +73,10 @@
     <string name="sound">Suara</string>
     <string name="dnd">Jangan Ganggu</string>
     <string name="dnd_desc">Aktifkan mode Jangan Ganggu ketika timer Fokus berjalan</string>
-    <string name="get_plus">Dapatkan Tomato+</string>
+    <string name="get_plus">Dapatkan Focus Glass+</string>
     <string name="dynamic_color">Warna dinamis</string>
     <string name="dynamic_color_desc">Sesuaikan warna tema dari wallpaper perangkat</string>
-    <string name="tomato_foss" translatable="false">Tomato FOSS</string>
+    <string name="tomato_foss" translatable="false">Focus Glass FOSS</string>
     <string name="tomato_foss_desc">Semua fitur tidak terkunci di versi sumber terbuka ini. Jika aplikasi ini bermanfaat , mohon pertimbangkan untuk dukung saya dengan berdonasi di %1$s.</string>
     <string name="language">Bahasa</string>
     <string name="choose_language">Pilih bahasa</string>
@@ -103,7 +103,7 @@
     <string name="focus_history_heatmap">Heatmap riwayat fokus</string>
     <string name="focus_history_heatmap_desc">Riwayat fokus pada tahun lalu. Warna yg lebih gelap menunjukkan durasi yg lebih lama. Hari-hari dikelompokkan berdasarkan bulan. Ketuk pada hari tersebut untuk informasi selengkapnya.</string>
     <string name="gap">Celah</string>
-    <string name="help_with_translation_desc">Terjemahkan Tomato ke bahasamu</string>
+    <string name="help_with_translation_desc">Terjemahkan Focus Glass ke bahasamu</string>
     <string name="history_widget_desc">Lihat grafik durasi fokus beberapa hari terakhir. Jumlah hari yang ditampilkan bergantung pada ukuran widget.</string>
     <string name="hours_and_minutes_format">%1$dh %2$dm</string>
     <string name="hours_format">%1$dh</string>
@@ -121,7 +121,7 @@
     <string name="show_chart">Tampilkan grafik</string>
     <string name="timer_reset_message">Timer direset</string>
     <string name="today_widget_desc">Statistik fokus hari ini</string>
-    <string name="tomato_plus_desc">Kustomisasi lebih lanjut dengan Tomato+</string>
+    <string name="tomato_plus_desc">Kustomisasi lebih lanjut dengan Focus Glass+</string>
     <string name="total">total</string>
     <string name="undo">Undo</string>
     <string name="vibration_strength">Kekuatan</string>

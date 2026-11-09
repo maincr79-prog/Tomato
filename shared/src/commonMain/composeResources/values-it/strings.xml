@@ -72,13 +72,13 @@
     <string name="appearance">Aspetto</string>
     <string name="sound">Suono</string>
     <string name="dnd">Non disturbare</string>
-    <string name="get_plus">Ottieni Tomato+</string>
+    <string name="get_plus">Ottieni Focus Glass+</string>
     <string name="dynamic_color_desc">Adatta i colori del tema dal tuo sfondo</string>
     <string name="language">Lingua</string>
     <string name="choose_language">Scegli la lingua</string>
     <string name="durations">Durate</string>
     <string name="dnd_desc">Attiva la modalità non disturbare quando avvii un timer di concentrazione</string>
-    <string name="tomato_foss" translatable="false">Tomato FOSS</string>
+    <string name="tomato_foss" translatable="false">Focus Glass FOSS</string>
     <string name="rate_on_google_play">Valuta su Google Play</string>
     <string name="selected">Selezionato</string>
     <string name="dynamic_color">Colore dinamico</string>
@@ -101,8 +101,8 @@
     <string name="focus_history_heatmap">Mappa cromatica della concentrazione</string>
     <string name="focus_history_heatmap_desc">Cronologia della concentrazione dell\u0027ultimo anno. I colori più intensi indicano una durata maggiore. I giorni sono raggruppati per mese. Tocca un giorno per ulteriori informazioni.</string>
     <string name="gap">Intervallo</string>
-    <string name="help_with_translation">Aiutaci a tradurre Tomato</string>
-    <string name="help_with_translation_desc">Traduci Tomato nella tua lingua</string>
+    <string name="help_with_translation">Aiutaci a tradurre Focus Glass</string>
+    <string name="help_with_translation_desc">Traduci Focus Glass nella tua lingua</string>
     <string name="history_widget_desc">Visualizza un grafico delle durate di concentrazione degli ultimi giorni. Il numero di giorni mostrati dipende dalle dimensioni del widget.</string>
     <string name="hours_and_minutes_format">%1$dh %2$dm</string>
     <string name="hours_format">%1$dh</string>
@@ -112,8 +112,8 @@
     <string name="media_volume_for_alarm">Modalità con cuffie</string>
     <string name="media_volume_for_alarm_desc">La riproduzione avviene solo in cuffia. Se le cuffie si disconnettono, la sveglia passa agli altoparlanti al volume multimediale.</string>
     <string name="minutes_format">%1$dm</string>
-    <string name="open_tomato">Apri Tomato</string>
-    <string name="quit_tomato">Esci da Tomato</string>
+    <string name="open_tomato">Apri Focus Glass</string>
+    <string name="quit_tomato">Esci da Focus Glass</string>
     <string name="rate_on_google_play_desc">Ti piace l’app? Scrivi una recensione!</string>
     <string name="reset_data">Reimposta statistiche</string>
     <string name="reset_data_dialog_text">Tutte le statistiche salvate verranno eliminate definitivamente. L’operazione non può essere annullata.</string>
@@ -126,7 +126,7 @@
     <string name="timer_reset_message">Timer è stato reimpostato</string>
     <string name="timer_settings_reset_info">Reimposta il timer per modificare le impostazioni</string>
     <string name="today_widget_desc">Statistiche di concentrazione di oggi</string>
-    <string name="tomato_plus_desc">Personalizza ulteriormente con Tomato+</string>
+    <string name="tomato_plus_desc">Personalizza ulteriormente con Focus Glass+</string>
     <string name="total">totale</string>
     <string name="undo">Annulla</string>
     <string name="vibration_strength">Intensità</string>

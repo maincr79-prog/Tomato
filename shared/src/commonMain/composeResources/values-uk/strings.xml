@@ -75,26 +75,26 @@
     <string name="sound">Звук</string>
     <string name="dnd">Не турбувати</string>
     <string name="dnd_desc">Активувати режим «Не турбувати», доки таймер активний</string>
-    <string name="app_name_plus" translatable="false">Tomato+</string>
-    <string name="get_plus">Отримати Tomato+</string>
+    <string name="app_name_plus" translatable="false">Focus Glass+</string>
+    <string name="get_plus">Отримати Focus Glass+</string>
     <string name="dynamic_color">Динамічний колір</string>
     <string name="dynamic_color_desc">Адаптуйте кольори теми зі своїх шпалер</string>
-    <string name="tomato_foss" translatable="false">Tomato FOSS</string>
+    <string name="tomato_foss" translatable="false">Focus Glass FOSS</string>
     <string name="tomato_foss_desc">Усі функції розблоковано в цій версії. Якщо мій додаток допоміг Вам у житті, будь ласка, підтримайте мене, зробивши пожертву на %1$s.</string>
     <string name="language">Мова</string>
     <string name="choose_language">Вибрати мову</string>
     <string name="rate_on_google_play">Оцінити на Google Play</string>
     <string name="selected">Обрано</string>
     <string name="timer_settings_reset_info">Перезапустіть таймер, щоб змінити налаштування</string>
-    <string name="help_with_translation">Допомогти з перекладом Tomato</string>
+    <string name="help_with_translation">Допомогти з перекладом Focus Glass</string>
     <string name="hours_and_minutes_format">%1$dгод %2$dхв</string>
     <string name="hours_format">%1$dгод</string>
     <string name="minutes_format">%1$dхв</string>
     <string name="about">Відомості</string>
-    <string name="help_with_translation_desc">Перекладіть Tomato на Вашу мову</string>
+    <string name="help_with_translation_desc">Перекладіть Focus Glass на Вашу мову</string>
     <string name="rate_on_google_play_desc">Сподобався додаток? Напишіть відгук!</string>
     <string name="bmc_desc">Підтримайте мене невеликим пожертвуванням</string>
-    <string name="tomato_plus_desc">Налаштуйте ще більше з Tomato+</string>
+    <string name="tomato_plus_desc">Налаштуйте ще більше з Focus Glass+</string>
     <string name="license">Ліцензія</string>
     <string name="media_volume_for_alarm">Режим навушників</string>
     <string name="media_volume_for_alarm_desc">Сигнал грає лише в навушниках. Якщо навушники від\u0027єднані, сигнал грає через динамік на гучності звуку медіа.</string>
@@ -146,8 +146,8 @@
     <string name="infinite_focus">Нескінченний фокус</string>
     <string name="settings_infinite_focus_tip">Натисніть і утримуйте кнопку таймера, щоб увімкнути режим нескінченного фокусу</string>
     <string name="cancel">Скасувати</string>
-    <string name="open_tomato">Відкрити Tomato</string>
-    <string name="quit_tomato">Вийти з Tomato</string>
+    <string name="open_tomato">Відкрити Focus Glass</string>
+    <string name="quit_tomato">Вийти з Focus Glass</string>
     <string name="advanced">Розширені</string>
     <string name="default_name">Стандартно</string>
     <string name="topics">Теми</string>

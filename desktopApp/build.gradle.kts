@@ -37,11 +37,11 @@ compose.desktop {
         mainClass = "org.nsh07.pomodoro.MainKt"
 
         nativeDistributions {
-            packageName = "Tomato"
+            packageName = "FocusGlass"
             packageVersion = libs.versions.app.versionName.get()
             description = "Minimalist, data-oriented pomodoro timer"
-            copyright = "Copyright (c) 2025-2026 Nishant Mishra"
-            vendor = "Nishant Mishra"
+            copyright = "Copyright (c) 2026 Mohammad"
+            vendor = "Mohammad"
             licenseFile.set(project.file("../LICENSE"))
 
             targetFormats(
@@ -62,7 +62,7 @@ compose.desktop {
                 appRelease = ogVersionCode
                 appCategory = "TIMER"
 
-                debMaintainer = "nishant.28@outlook.com"
+                debMaintainer = "mrcrank79@gmail.com"
                 debPackageVersion = ogVersionName.replace('-', '~')
 
                 rpmLicenseType = "GPLv3"
@@ -70,13 +70,13 @@ compose.desktop {
             }
             macOS {
                 iconFile = project.file("src/main/logo.icns")
-                bundleID = "org.nsh07.pomodoro"
+                bundleID = "io.github.mohammad802.pomodoro"
                 appCategory = "public.app-category.productivity"
                 packageVersion = getNativePackageVersion(ogVersionName, ogVersionCode)
             }
             windows {
                 iconFile = project.file("src/main/logo.ico")
-                description = "Tomato"
+                description = "Focus Glass"
                 console = false
                 dirChooser = true
                 perUserInstall = true

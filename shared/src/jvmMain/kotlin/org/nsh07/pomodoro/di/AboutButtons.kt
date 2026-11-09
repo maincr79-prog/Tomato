@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2025-2026 Nishant Mishra
+ * Copyright (c) 2026 Mohammad (Focus Glass modifications)
  *
  * This file is part of Tomato - a minimalist pomodoro timer for Android.
  *
@@ -42,7 +43,7 @@ import tomato.shared.generated.resources.weblate
 fun TopButton(modifier: Modifier = Modifier) {
     val uriHandler = LocalUriHandler.current
     SegmentedListItem(
-        onClick = { uriHandler.openUri("https://coff.ee/nsh07") },
+        onClick = { uriHandler.openUri("https://t.me/editoramx") },
         leadingContent = {
             Icon(
                 painterResource(Res.drawable.bmc),
@@ -64,7 +65,7 @@ fun TopButton(modifier: Modifier = Modifier) {
 fun BottomButton(modifier: Modifier = Modifier) {
     val uriHandler = LocalUriHandler.current
     SegmentedListItem(
-        onClick = { uriHandler.openUri("https://hosted.weblate.org/engage/tomato/") },
+        onClick = { uriHandler.openUri("https://t.me/editoramx") },
         leadingContent = {
             Icon(
                 painterResource(Res.drawable.weblate),

@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2025-2026 Nishant Mishra
+ * Copyright (c) 2026 Mohammad (Focus Glass modifications)
  *
  * This file is part of Tomato - a minimalist pomodoro timer for Android.
  *
@@ -87,7 +88,7 @@ import tomato.shared.generated.resources.app_name
 import tomato.shared.generated.resources.app_name_plus
 import tomato.shared.generated.resources.arrow_back
 import tomato.shared.generated.resources.back
-import tomato.shared.generated.resources.discord
+import tomato.shared.generated.resources.bmc
 import tomato.shared.generated.resources.email
 import tomato.shared.generated.resources.gavel
 import tomato.shared.generated.resources.github
@@ -95,7 +96,6 @@ import tomato.shared.generated.resources.globe
 import tomato.shared.generated.resources.ic_launcher_monochrome
 import tomato.shared.generated.resources.license
 import tomato.shared.generated.resources.pfp
-import tomato.shared.generated.resources.x
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
@@ -116,10 +116,9 @@ fun AboutScreen(
 
     val socialLinks = remember {
         listOf(
-            SocialLink(Res.drawable.github, "https://github.com/nsh07"),
-            SocialLink(Res.drawable.x, "https://x.com/nsh_zero7"),
-            SocialLink(Res.drawable.globe, "https://nsh07.github.io"),
-            SocialLink(Res.drawable.email, "mailto:nishant.28@outlook.com")
+            SocialLink(Res.drawable.github, "https://github.com/mohammad802"),
+            SocialLink(Res.drawable.globe, "https://mohammad802.github.io/portfolio"),
+            SocialLink(Res.drawable.email, "mailto:mrcrank79@gmail.com")
         )
     }
 
@@ -214,25 +213,12 @@ fun AboutScreen(
                             Spacer(Modifier.weight(1f))
                             Row(horizontalArrangement = Arrangement.spacedBy(2.dp)) {
                                 FilledTonalIconButton(
-                                    onClick = {
-                                        uriHandler.openUri("https://discord.gg/MHhBQcxHu6")
-                                    },
+                                    onClick = { uriHandler.openUri("https://t.me/editoramx") },
                                     shapes = IconButtonDefaults.shapes()
                                 ) {
                                     Icon(
-                                        painterResource(Res.drawable.discord),
-                                        contentDescription = "Discord",
-                                        modifier = Modifier.size(24.dp)
-                                    )
-                                }
-
-                                FilledTonalIconButton(
-                                    onClick = { uriHandler.openUri("https://github.com/nsh07/Tomato") },
-                                    shapes = IconButtonDefaults.shapes()
-                                ) {
-                                    Icon(
-                                        painterResource(Res.drawable.github),
-                                        contentDescription = "GitHub",
+                                        painterResource(Res.drawable.bmc),
+                                        contentDescription = "Telegram",
                                         modifier = Modifier.size(24.dp)
                                     )
                                 }
@@ -259,7 +245,7 @@ fun AboutScreen(
                                 Spacer(Modifier.width(16.dp))
                                 Column {
                                     Text(
-                                        "Nishant Mishra",
+                                        "Mohammad",
                                         style = typography.titleLarge,
                                         color = colorScheme.onSurface,
                                         fontFamily = typography.bodyLarge.fontFamily

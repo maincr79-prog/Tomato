@@ -20,7 +20,7 @@
     <string name="alarm_sound">鬧鐘聲音</string>
     <string name="always_on_display">螢幕長亮模式</string>
     <string name="always_on_display_desc">在計時畫面任意點擊以切換至螢幕長亮模式</string>
-    <string name="app_name" translatable="false">Tomato</string>
+    <string name="app_name" translatable="false">Focus Glass</string>
     <string name="black_theme">純黑主題</string>
     <string name="black_theme_desc">使用純黑的深色主題</string>
     <string name="break_">休息</string>
@@ -76,26 +76,26 @@
     <string name="sound">聲音</string>
     <string name="dnd">請勿打擾</string>
     <string name="dnd_desc">執行專注計時器時自動開啟請勿打擾模式</string>
-    <string name="app_name_plus" translatable="false">Tomato+</string>
-    <string name="get_plus">取得 Tomato+</string>
+    <string name="app_name_plus" translatable="false">Focus Glass+</string>
+    <string name="get_plus">取得 Focus Glass+</string>
     <string name="dynamic_color">動態配色</string>
     <string name="dynamic_color_desc">根據桌布自動調整主題顏色</string>
-    <string name="tomato_foss" translatable="false">Tomato FOSS</string>
+    <string name="tomato_foss" translatable="false">Focus Glass FOSS</string>
     <string name="tomato_foss_desc">此版本已解鎖所有功能。若這個 App 對你有所幫助，歡迎至 %1$s 贊助支持開發者。</string>
     <string name="language">語言</string>
     <string name="choose_language">選擇語言</string>
     <string name="rate_on_google_play">在 Google Play 上評分</string>
     <string name="selected">已選擇</string>
-    <string name="help_with_translation">協助翻譯 Tomato</string>
+    <string name="help_with_translation">協助翻譯 Focus Glass</string>
     <string name="timer_settings_reset_info">重置計時器以變更設定</string>
     <string name="hours_and_minutes_format">%1$d小時 %2$d分鐘</string>
     <string name="hours_format">%1$d小時</string>
     <string name="minutes_format">%1$d分鐘</string>
     <string name="about">關於</string>
-    <string name="help_with_translation_desc">將 Tomato 翻譯成你的語言</string>
+    <string name="help_with_translation_desc">將 Focus Glass 翻譯成你的語言</string>
     <string name="rate_on_google_play_desc">喜歡這個 App 嗎？寫個評論吧！</string>
     <string name="bmc_desc">以小額捐款支持我</string>
-    <string name="tomato_plus_desc">使用 Tomato+ 進一步自訂</string>
+    <string name="tomato_plus_desc">使用 Focus Glass+ 進一步自訂</string>
     <string name="license">授權條款</string>
     <string name="media_volume_for_alarm">耳機模式</string>
     <string name="media_volume_for_alarm_desc">僅透過耳機播放。若耳機斷線，鬧鐘將以媒體音量從喇叭播放。</string>
@@ -147,8 +147,8 @@
     <string name="infinite_focus">無限專注</string>
     <string name="settings_infinite_focus_tip">長按計時器時鐘即可啟用無限專注模式</string>
     <string name="cancel">取消</string>
-    <string name="open_tomato">開啟 Tomato</string>
-    <string name="quit_tomato">結束 Tomato</string>
+    <string name="open_tomato">開啟 Focus Glass</string>
+    <string name="quit_tomato">結束 Focus Glass</string>
     <string name="advanced">進階</string>
     <string name="topics">主題</string>
     <string name="create_new_topic">新主題</string>

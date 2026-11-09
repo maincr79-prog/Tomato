@@ -1,6 +1,6 @@
-<i>Tomato</i>, Material 3 Expressive tabanlı, Android için minimal bir Pomodoro sayacıdır.
+<i>Focus Glass</i>, Material 3 Expressive tabanlı, Android için minimal bir Pomodoro sayacıdır.
 
-Tomato tamamen ücretsizdir ve sonsuza kadar açık kaynaklı kalacaktır. Kaynak koduna ulaşmak, hata bildirmek veya özellik önermek için: https://github.com/nsh07/Tomato
+Focus Glass tamamen ücretsizdir ve sonsuza kadar açık kaynaklı kalacaktır. Kaynak koduna ulaşmak, hata bildirmek veya özellik önermek için: https://github.com/mohammad802/pomodoro
 
 <b>Özellikler:</b>
 - En son Material 3 Expressive yönergelerine dayalı basit, minimalist kullanıcı arayüzü

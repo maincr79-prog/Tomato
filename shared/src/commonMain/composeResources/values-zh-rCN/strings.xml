@@ -75,25 +75,25 @@
     <string name="sound">声音</string>
     <string name="dnd">勿扰模式</string>
     <string name="dnd_desc">运行「专注」计时器时打开勿扰</string>
-    <string name="get_plus">获取 Tomato+</string>
+    <string name="get_plus">获取 Focus Glass+</string>
     <string name="dynamic_color">动态配色</string>
     <string name="dynamic_color_desc">从您的壁纸中提取主题色</string>
-    <string name="tomato_foss" translatable="false">Tomato FOSS</string>
+    <string name="tomato_foss" translatable="false">Focus Glass FOSS</string>
     <string name="tomato_foss_desc">此版本已解锁所有功能。若这个应用对您有帮助，请考虑在 %1$s 上捐款支持我。</string>
     <string name="language">语言</string>
     <string name="choose_language">选择语言</string>
     <string name="rate_on_google_play">在 Google Play 上评价</string>
     <string name="selected">已选中</string>
-    <string name="help_with_translation">协助翻译 Tomato</string>
+    <string name="help_with_translation">协助翻译 Focus Glass</string>
     <string name="timer_settings_reset_info">重置定时器以更改设置</string>
     <string name="hours_and_minutes_format">%1$d 小时 %2$d 分钟</string>
     <string name="hours_format">%1$d 小时</string>
     <string name="minutes_format">%1$d 分钟</string>
     <string name="about">关于</string>
-    <string name="help_with_translation_desc">将 Tomato 翻译成您的语言</string>
+    <string name="help_with_translation_desc">将 Focus Glass 翻译成您的语言</string>
     <string name="rate_on_google_play_desc">喜欢本应用？写一条评价吧！</string>
     <string name="bmc_desc">小额捐赠支持</string>
-    <string name="tomato_plus_desc">使用 Tomato+ 进行更多个性化设置</string>
+    <string name="tomato_plus_desc">使用 Focus Glass+ 进行更多个性化设置</string>
     <string name="license">许可证</string>
     <string name="media_volume_for_alarm">耳机模式</string>
     <string name="media_volume_for_alarm_desc">仅在耳机上播放。如果耳机连接断开，闹铃将以媒体音量通过扬声器播放。</string>
@@ -145,8 +145,8 @@
     <string name="infinite_focus">无限专注时长</string>
     <string name="settings_infinite_focus_tip">长按计时器时钟来启用无限专注模式</string>
     <string name="cancel">取消</string>
-    <string name="open_tomato">打开 Tomato</string>
-    <string name="quit_tomato">关闭 Tomato</string>
+    <string name="open_tomato">打开 Focus Glass</string>
+    <string name="quit_tomato">关闭 Focus Glass</string>
     <string name="advanced">高级</string>
     <string name="topics">主题</string>
     <string name="create_new_topic">新建主题</string>

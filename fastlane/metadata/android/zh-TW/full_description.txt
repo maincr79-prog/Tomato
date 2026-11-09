@@ -1,6 +1,6 @@
-<i>Tomato</i> 是一款基於 Material 3 Expressive 的 Android 極簡番茄鐘計時器。
+<i>Focus Glass</i> 是一款基於 Material 3 Expressive 的 Android 極簡番茄鐘計時器。
 
-Tomato 完全免費且開源，永遠如此。你可以在 https://github.com/nsh07/Tomato 取得原始碼，並回報問題或提出功能建議。
+Focus Glass 完全免費且開源，永遠如此。你可以在 https://github.com/mohammad802/pomodoro 取得原始碼，並回報問題或提出功能建議。
 
 <b>功能：</b>
 - 依循最新 Material 3 Expressive 設計規範的簡潔、極簡介面

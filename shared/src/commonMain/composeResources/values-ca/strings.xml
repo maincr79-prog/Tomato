@@ -40,8 +40,8 @@
     <string name="exit">Sortir</string>
     <string name="focus">Concentració</string>
     <string name="focus_per_day_avg">concentració per dia (mitjana)</string>
-    <string name="get_plus">Aconsegueix Tomato+</string>
-    <string name="help_with_translation">Ajuda a traduir Tomato</string>
+    <string name="get_plus">Aconsegueix Focus Glass+</string>
+    <string name="help_with_translation">Ajuda a traduir Focus Glass</string>
     <string name="hours_and_minutes_format">%1$dh %2$dm</string>
     <string name="hours_format">%1$dh</string>
     <string name="language">Idioma</string>
@@ -89,10 +89,10 @@
     <string name="vibrate">Vibració</string>
     <string name="vibrate_desc">Vibra quan s\u0027acaba un temporitzador</string>
     <string name="about">Sobre</string>
-    <string name="help_with_translation_desc">Tradueix Tomato al teu idioma</string>
+    <string name="help_with_translation_desc">Tradueix Focus Glass al teu idioma</string>
     <string name="rate_on_google_play_desc">T\u0027ha agradat l\u0027aplicació? Escriu una ressenya!</string>
     <string name="bmc_desc">Ajuda\u0027m amb una petita donació</string>
-    <string name="tomato_plus_desc">Personalitza\u0027l encara més amb Tomato+</string>
+    <string name="tomato_plus_desc">Personalitza\u0027l encara més amb Focus Glass+</string>
     <string name="license">Llicència</string>
     <string name="media_volume_for_alarm">Mode d\u0027auriculars</string>
     <string name="media_volume_for_alarm_desc">Només es reprodueix amb auriculars. Si els auriculars estan desconnectats, l\u0027alarma es reprodueix per l\u0027altaveu al volum multimèdia.</string>

@@ -26,8 +26,8 @@
     <string name="color">Barva</string>
     <string name="exit">Odejít</string>
     <string name="focus">Soustředění</string>
-    <string name="get_plus">Získej Tomato+</string>
-    <string name="help_with_translation">Pomož přeložit Tomato</string>
+    <string name="get_plus">Získej Focus Glass+</string>
+    <string name="help_with_translation">Pomož přeložit Focus Glass</string>
     <string name="language">Jazyk</string>
     <string name="last_month">Tento měsíc</string>
     <string name="last_week">Tento týden</string>
@@ -94,7 +94,7 @@
     <string name="focus_history_heatmap_desc">Historie soustředění za poslední rok. Tmavší barva znamená delší soustředění. Dny jsou seskupeny podle měsíců. Pro více informací klepněte na den.</string>
     <string name="focus_per_day_avg">soustředění za den (průměr)</string>
     <string name="gap">Mezera</string>
-    <string name="help_with_translation_desc">Pomozte s překladem aplikace Tomato do svého jazyka</string>
+    <string name="help_with_translation_desc">Pomozte s překladem aplikace Focus Glass do svého jazyka</string>
     <string name="history_widget_desc">Graf trvání soustředění za posledních několik dní. Počet zobrazených dní záleží na velikosti widgetu.</string>
     <string name="hours_and_minutes_format">%1$d h %2$d min</string>
     <string name="hours_format">%1$d h</string>
@@ -122,7 +122,7 @@
     <string name="timer_reset_message">Časovač resetován</string>
     <string name="timer_settings_reset_info">Pro změnu nastavení resetujte časovač</string>
     <string name="tomato_foss_desc">V této verzi jsou odemčeny všechny funkce. Pokud vám moje aplikace pomohla, zvažte prosím mé podpoření přispěním na %1$s.</string>
-    <string name="tomato_plus_desc">Další přizpůsobení s Tomato+</string>
+    <string name="tomato_plus_desc">Další přizpůsobení s Focus Glass+</string>
     <string name="total">celkem</string>
     <string name="undo">Vrátit</string>
     <string name="vibrate_desc">Vibrovat po ukončení časovače</string>
@@ -144,8 +144,8 @@
     <string name="infinite_focus">Nekonečné soutředění</string>
     <string name="settings_infinite_focus_tip">Dlouze podržte prst na časovači pro zapnutí nekonečného režimu soustředění</string>
     <string name="cancel">Zrušit</string>
-    <string name="open_tomato">Otevřít Tomato</string>
-    <string name="quit_tomato">Ukončit Tomato</string>
+    <string name="open_tomato">Otevřít Focus Glass</string>
+    <string name="quit_tomato">Ukončit Focus Glass</string>
     <string name="advanced">Pokročilé</string>
     <string name="topics">Témata</string>
     <string name="create_new_topic">Nové téma</string>

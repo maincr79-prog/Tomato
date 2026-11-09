@@ -42,9 +42,9 @@
     <string name="focus_history_heatmap_desc">Din fokushistorik for det seneste år. Mørkere farver betyder længere tid. Dage er grupperet efter måned. Tryk på en dag for at se mere.</string>
     <string name="focus_per_day_avg">Gennemsnitlig fokus per dag</string>
     <string name="gap">Mellemrum</string>
-    <string name="get_plus">Få Tomato+</string>
-    <string name="help_with_translation">Hjælp med at oversætte Tomato</string>
-    <string name="help_with_translation_desc">Oversæt Tomato til dit sprog</string>
+    <string name="get_plus">Få Focus Glass+</string>
+    <string name="help_with_translation">Hjælp med at oversætte Focus Glass</string>
+    <string name="help_with_translation_desc">Oversæt Focus Glass til dit sprog</string>
     <string name="history_widget_desc">Se et diagram over dine fokustider fra de seneste dage. Antallet af dage, der vises, afhænger af widgettens størrelse.</string>
     <string name="hours_and_minutes_format">%1$dt %2$dm</string>
     <string name="hours_format">%1$dt</string>
@@ -104,7 +104,7 @@
     <string name="today">I dag</string>
     <string name="today_widget_desc">Dagens fokusstatistik</string>
     <string name="tomato_foss_desc">Alle funktioner er låst op i denne version. Hvis min app har gjort en forskel i dit liv, så overvej venligst at støtte mig med en donation på %1$s.</string>
-    <string name="tomato_plus_desc">Tilpas yderligere med Tomato+</string>
+    <string name="tomato_plus_desc">Tilpas yderligere med Focus Glass+</string>
     <string name="total">I alt</string>
     <string name="undo">Fortryd</string>
     <string name="up_next">Det næste</string>

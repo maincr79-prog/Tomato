@@ -52,9 +52,9 @@
     <string name="focus_history_heatmap">Susikaupimo istorijos heatmap</string>
     <string name="focus_history_heatmap_desc">Šių metų susikaupimo istorija. Gilesnės spalvos reiškia ilgesnę trukmę. Dienos yra sugrupuotos pagal mėnesį.</string>
     <string name="focus_per_day_avg">Susikaupimas per dieną (vidurkis)</string>
-    <string name="get_plus">Gauti Tomato+</string>
-    <string name="help_with_translation">Padėk versti Tomato</string>
-    <string name="help_with_translation_desc">Išversk Tomato į savo kalbą</string>
+    <string name="get_plus">Gauti Focus Glass+</string>
+    <string name="help_with_translation">Padėk versti Focus Glass</string>
+    <string name="help_with_translation_desc">Išversk Focus Glass į savo kalbą</string>
     <string name="hours_and_minutes_format">%1$dh %2$dm</string>
     <string name="hours_format">%1$dh</string>
     <string name="language">Kalba</string>

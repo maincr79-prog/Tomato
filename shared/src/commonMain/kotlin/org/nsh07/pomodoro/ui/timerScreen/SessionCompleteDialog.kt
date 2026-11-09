@@ -70,6 +70,12 @@ import tomato.shared.generated.resources.Res
 import tomato.shared.generated.resources.alarm
 import tomato.shared.generated.resources.completed
 import tomato.shared.generated.resources.stop_alarm
+import tomato.shared.generated.resources.session_done_title
+import tomato.shared.generated.resources.tests_solved_label
+import tomato.shared.generated.resources.tests_count_fmt
+import tomato.shared.generated.resources.session_note_hint
+import tomato.shared.generated.resources.skip_and_break
+import tomato.shared.generated.resources.save_tests_and_break
 
 @Composable
 fun SessionCompleteDialog(
@@ -127,7 +133,7 @@ fun SessionCompleteDialog(
                 Spacer(Modifier.height(14.dp))
 
                 Text(
-                    text = "خسته نباشی! پومودرو تکمیل شد 🎉",
+                    text = stringResource(Res.string.session_done_title),
                     style = typography.titleLarge.copy(fontWeight = FontWeight.Bold),
                     textAlign = TextAlign.Center,
                     color = colorScheme.onSurface
@@ -161,7 +167,7 @@ fun SessionCompleteDialog(
 
                 // Test Counter section
                 Text(
-                    text = "تعداد تست‌های حل‌شده:",
+                    text = stringResource(Res.string.tests_solved_label),
                     style = typography.bodyMedium,
                     color = colorScheme.onSurfaceVariant
                 )
@@ -212,7 +218,7 @@ fun SessionCompleteDialog(
                             .padding(horizontal = 20.dp, vertical = 8.dp)
                     ) {
                         Text(
-                            text = "$testCount تست",
+                            text = stringResource(Res.string.tests_count_fmt, testCount),
                             style = typography.headlineSmall.copy(
                                 fontWeight = FontWeight.ExtraBold,
                                 color = colorScheme.primary
@@ -253,7 +259,7 @@ fun SessionCompleteDialog(
                 OutlinedTextField(
                     value = note,
                     onValueChange = { note = it },
-                    label = { Text("یادداشت جلسه (مثلاً فصل ۲ تست ۱ تا ۲۰)", fontSize = 12.sp) },
+                    label = { Text(stringResource(Res.string.session_note_hint), fontSize = 12.sp) },
                     singleLine = true,
                     shape = RoundedCornerShape(14.dp),
                     modifier = Modifier.fillMaxWidth()
@@ -274,7 +280,7 @@ fun SessionCompleteDialog(
                         }
                     ) {
                         Text(
-                            text = "صرف‌نظر و استراحت",
+                            text = stringResource(Res.string.skip_and_break),
                             color = colorScheme.onSurfaceVariant
                         )
                     }
@@ -288,7 +294,7 @@ fun SessionCompleteDialog(
                         shape = RoundedCornerShape(16.dp)
                     ) {
                         Text(
-                            text = if (testCount > 0) "ثبت تست و استراحت" else stringResource(Res.string.stop_alarm),
+                            text = if (testCount > 0) stringResource(Res.string.save_tests_and_break) else stringResource(Res.string.stop_alarm),
                             fontWeight = FontWeight.Bold
                         )
                     }

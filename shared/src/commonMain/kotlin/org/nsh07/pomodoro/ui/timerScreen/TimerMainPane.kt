@@ -130,6 +130,8 @@ import org.nsh07.pomodoro.ui.timerScreen.viewModel.TimerState
 import org.nsh07.pomodoro.ui.topBarWindowInsets
 import org.nsh07.pomodoro.utils.androidSdkVersionAtLeast
 import tomato.shared.generated.resources.Res
+import tomato.shared.generated.resources.mode_countdown
+import tomato.shared.generated.resources.mode_stopwatch
 import tomato.shared.generated.resources.app_name
 import tomato.shared.generated.resources.app_name_plus
 import tomato.shared.generated.resources.create_new_topic
@@ -481,7 +483,7 @@ fun SharedTransitionScope.TimerMainPane(
                                         .padding(horizontal = 14.dp, vertical = 4.dp)
                                 ) {
                                     Text(
-                                        text = if (timerState.infiniteFocus) "⏱️ کورنومتر مستقیم" else "⏳ پومودرو معکوس",
+                                        text = if (timerState.infiniteFocus) stringResource(Res.string.mode_stopwatch) else stringResource(Res.string.mode_countdown),
                                         style = typography.labelMedium,
                                         color = colorScheme.primary,
                                         fontWeight = FontWeight.Bold

@@ -187,7 +187,15 @@
     <string name="tests_today">📝 %1$d tests</string>
     <string name="set_goal_hint">Set a daily goal in Settings</string>
     <string name="goal_reached">Goal reached ✨</string>
-    <string name="today_tests_title">Today\'s tests</string>
+    <string name="today_tests_title">Today’s tests</string>
+    <string name="session_done_title">Great work! Pomodoro complete 🎉</string>
+    <string name="tests_solved_label">Tests solved:</string>
+    <string name="tests_count_fmt">%1$d tests</string>
+    <string name="session_note_hint">Session note (e.g. chapter 2, tests 1–20)</string>
+    <string name="skip_and_break">Skip and take a break</string>
+    <string name="save_tests_and_break">Save tests and take a break</string>
+    <string name="mode_stopwatch">⏱️ Stopwatch</string>
+    <string name="mode_countdown">⏳ Pomodoro countdown</string>
     <string name="total_tests_title">All-time tests</string>
     <string name="tests_count">%1$d tests</string>
 </resources>

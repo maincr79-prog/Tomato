@@ -17,7 +17,9 @@
 
 package org.nsh07.pomodoro.ui.statsScreen.components
 
+import com.patrykandpatrick.vico.compose.cartesian.data.CartesianLayerRangeProvider
 import com.patrykandpatrick.vico.compose.cartesian.data.ColumnCartesianLayerModel
+import kotlin.math.ceil
 import com.patrykandpatrick.vico.compose.cartesian.layer.ColumnCartesianLayer
 import com.patrykandpatrick.vico.compose.common.component.LineComponent
 import com.patrykandpatrick.vico.compose.common.data.ExtraStore
@@ -46,6 +48,27 @@ class Providers {
                 else aboveLimitComponent
             }
         }
+
+        /**
+         * Rounds the chart's top up so the 4 Y-axis labels (0 + 3 steps) land on round
+         * times like 0/20m/40m/1h instead of 0/16m/33m/50m.
+         */
+        private object NiceTimeRangeProvider : CartesianLayerRangeProvider {
+            private const val MINUTE = 60_000.0
+            private val stepsInMinutes = listOf(5, 10, 15, 20, 30)
+
+            override fun getMinY(minY: Double, maxY: Double, extraStore: ExtraStore) = 0.0
+
+            override fun getMaxY(minY: Double, maxY: Double, extraStore: ExtraStore): Double {
+                val neededStep = maxY / 3
+                val minuteStep = stepsInMinutes.firstOrNull { it * MINUTE >= neededStep }
+                val step = if (minuteStep != null) minuteStep * MINUTE
+                else ceil(neededStep / (60 * MINUTE)) * 60 * MINUTE // whole hours
+                return step * 3
+            }
+        }
+
+        val niceTimeRangeProvider: CartesianLayerRangeProvider = NiceTimeRangeProvider
 
         fun columnProviderWithLimit(
             limit: Number,

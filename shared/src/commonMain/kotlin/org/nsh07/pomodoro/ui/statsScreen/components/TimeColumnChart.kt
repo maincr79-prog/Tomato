@@ -154,7 +154,8 @@ fun TimeColumnChart(
                             shape = CircleShape
                         )
                     ),
-                    columnCollectionSpacing = columnCollectionSpacing
+                    columnCollectionSpacing = columnCollectionSpacing,
+                    rangeProvider = Providers.niceTimeRangeProvider
                 ),
                 startAxis = VerticalAxis.rememberStart(
                     line = rememberLineComponent(Fill.Transparent, 8.dp),

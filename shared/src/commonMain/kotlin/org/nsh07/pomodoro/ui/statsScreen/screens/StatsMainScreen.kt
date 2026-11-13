@@ -32,7 +32,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.windowInsetsTopHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.text.TextAutoSize
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
@@ -665,5 +667,13 @@ fun SharedTransitionScope.StatsMainScreen(
                 }
             }
         }
+        // Scrim behind the status bar so scrolled cards don't collide with the clock/icons
+        // once the top bar has collapsed.
+        Box(
+            Modifier
+                .fillMaxWidth()
+                .windowInsetsTopHeight(WindowInsets.statusBars)
+                .background(colorScheme.surfaceContainer.copy(alpha = 1f))
+        )
     }
 }

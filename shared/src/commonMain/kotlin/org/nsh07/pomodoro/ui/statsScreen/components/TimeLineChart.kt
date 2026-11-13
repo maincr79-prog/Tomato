@@ -158,7 +158,8 @@ fun TimeLineChart(
                             interpolator = LineCartesianLayer.Interpolator.catmullRom()
                         )
                     ),
-                    pointSpacing = pointSpacing
+                    pointSpacing = pointSpacing,
+                    rangeProvider = Providers.niceTimeRangeProvider
                 ),
                 startAxis = VerticalAxis.rememberStart(
                     line = rememberLineComponent(Fill.Transparent, 8.dp),

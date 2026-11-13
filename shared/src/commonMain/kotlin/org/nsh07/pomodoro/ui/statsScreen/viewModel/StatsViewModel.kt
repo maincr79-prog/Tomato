@@ -192,8 +192,15 @@ class StatsViewModel(
         viewModelScope.launch(Dispatchers.Default) {
             lastYearStatsFlow.collect { list ->
                 val reversed = list.reversed()
-                val keys = reversed.map { it.date.format(yearDayFormatter) }
-                val values = reversed.map { it.totalFocusTime() }
+                var keys = reversed.map { it.date.format(yearDayFormatter) }
+                var values = reversed.map { it.totalFocusTime() }
+
+                // A line chart needs at least two points; with only one day of data
+                // it draws a broken line. Add a zero point for the previous day.
+                if (values.size == 1) {
+                    keys = listOf(reversed[0].date.minusDays(1).format(yearDayFormatter)) + keys
+                    values = listOf(0L) + values
+                }
 
                 lastYearChartProducer.runTransaction {
                     lineModel { series(values) }

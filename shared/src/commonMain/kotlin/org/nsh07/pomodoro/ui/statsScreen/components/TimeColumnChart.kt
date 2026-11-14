@@ -77,8 +77,10 @@ fun TimeColumnChart(
     minutesFormat: String,
     modifier: Modifier = Modifier,
     zoomEnabled: Boolean = true,
-    thickness: Dp = 40.dp,
+    thickness: Dp = 28.dp,
     columnCollectionSpacing: Dp = 4.dp,
+    /** Show every n-th x label; 2 for the 31-day chart so day numbers don't touch. */
+    xLabelSpacing: Int = 1,
     xValueFormatter: CartesianValueFormatter = remember { CartesianValueFormatter.decimal() },
     yValueFormatter: CartesianValueFormatter = remember {
         CartesianValueFormatter { _, value, _ ->
@@ -170,6 +172,9 @@ fun TimeColumnChart(
                     label = rememberTextComponent(typography.bodySmall.copy(colorScheme.onSurface)),
                     tick = null,
                     guideline = null,
+                    itemPlacer = remember(xLabelSpacing) {
+                        HorizontalAxis.ItemPlacer.aligned(spacing = { xLabelSpacing })
+                    },
                     valueFormatter = xValueFormatter
                 ),
                 decorations = decorations,

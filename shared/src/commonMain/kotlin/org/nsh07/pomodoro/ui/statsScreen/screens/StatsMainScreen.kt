@@ -49,6 +49,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.ui.graphics.Color
 import androidx.compose.material3.adaptive.currentWindowAdaptiveInfoV2
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -166,7 +167,13 @@ fun SharedTransitionScope.StatsMainScreen(
                 subtitle = {},
                 titleHorizontalAlignment = Alignment.CenterHorizontally,
                 scrollBehavior = scrollBehavior,
-                colors = topBarColors,
+                // The list below already paints the same translucent background behind the
+                // bar; painting it twice made the header visibly darker (a hard seam). Keep
+                // the bar clear at rest and opaque only once content scrolls under it.
+                colors = topBarColors.copy(
+                    containerColor = Color.Transparent,
+                    scrolledContainerColor = topBarColors.containerColor.copy(alpha = 1f)
+                ),
                 windowInsets = WindowInsets()
             )
         },
@@ -494,7 +501,8 @@ fun SharedTransitionScope.StatsMainScreen(
                             hoursFormat = hoursFormat,
                             hoursMinutesFormat = hoursMinutesFormat,
                             minutesFormat = minutesFormat,
-                            thickness = 8.dp,
+                            thickness = 12.dp,
+                            xLabelSpacing = 2,
                             xValueFormatter = remember(lastMonthSummaryChartXLabelKey) {
                                 CartesianValueFormatter { context, x, _ ->
                                     context.model.extraStore[lastMonthSummaryChartXLabelKey][x.toInt()]

@@ -84,7 +84,7 @@ class StatsViewModel(
     val summaryChartZoomStates = List(3) {
         VicoZoomState(
             zoomEnabled = currentOS == OS.ANDROID,
-            initialZoom = Zoom.fixed(),
+            initialZoom = Zoom.max(Zoom.fixed(), Zoom.Content),
             minZoom = Zoom.min(Zoom.Content, Zoom.fixed()),
             maxZoom = Zoom.max(Zoom.fixed(10f), Zoom.Content)
         )
@@ -163,11 +163,13 @@ class StatsViewModel(
     init {
         viewModelScope.launch(Dispatchers.Default) {
             lastWeekStatsFlow.collect { list ->
-                val reversed = list.reversed()
-                val keys = reversed.map {
-                    it.date.dayOfWeek.getDisplayName(TextStyle.NARROW, Locale.getDefault())
+                // Show every day of the window (0 for days without focus) so bars
+                // are evenly spread instead of bunched up on the left.
+                val days = continuousDays(list, 7)
+                val keys = days.map {
+                    it.first.dayOfWeek.getDisplayName(TextStyle.NARROW, Locale.getDefault())
                 }
-                val values = reversed.map { it.totalFocusTime() }
+                val values = days.map { it.second }
 
                 lastWeekChartProducer.runTransaction {
                     columnModel { series(values) }
@@ -178,9 +180,9 @@ class StatsViewModel(
 
         viewModelScope.launch(Dispatchers.Default) {
             lastMonthStatsFlow.collect { list ->
-                val reversed = list.reversed()
-                val keys = reversed.map { it.date.dayOfMonth.toString() }
-                val values = reversed.map { it.totalFocusTime() }
+                val days = continuousDays(list, 31)
+                val keys = days.map { it.first.dayOfMonth.toString() }
+                val values = days.map { it.second }
 
                 lastMonthChartProducer.runTransaction {
                     columnModel { series(values) }
@@ -341,6 +343,16 @@ class StatsViewModel(
                 started = SharingStarted.WhileSubscribed(5000),
                 initialValue = Pair(listOf(0L, 0L, 0L, 0L), 0L)
             )
+
+    /** Last [n] calendar days ending today (oldest first), with each day's focus time or 0. */
+    private fun continuousDays(list: List<Stat>, n: Int): List<Pair<LocalDate, Long>> {
+        val byDate = list.associate { it.date to it.totalFocusTime() }
+        val today = LocalDate.now()
+        return (n - 1 downTo 0).map { offset ->
+            val day = today.minusDays(offset.toLong())
+            day to (byDate[day] ?: 0L)
+        }
+    }
 
     fun generateSampleData() {
         if (appInfo.debug) {

@@ -234,7 +234,8 @@ fun SharedTransitionScope.LastMonthScreen(
                         hoursFormat = hoursFormat,
                         hoursMinutesFormat = hoursMinutesFormat,
                         minutesFormat = minutesFormat,
-                        thickness = 8.dp,
+                        thickness = 12.dp,
+                        xLabelSpacing = 2,
                         xValueFormatter = remember(xLabelKey) {
                             CartesianValueFormatter { context, x, _ ->
                                 context.model.extraStore[xLabelKey][x.toInt()]

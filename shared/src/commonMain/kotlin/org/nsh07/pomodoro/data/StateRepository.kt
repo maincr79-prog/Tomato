@@ -118,6 +118,9 @@ class StateRepository(
             ?: preferenceRepository.saveIntPreference("focus_goal", defaults.focusGoal.toInt())
                 .toLong()
 
+        // Not seeded: absent = no exam date set
+        val konkurDate = preferenceRepository.getIntPreference("konkur_date")?.toLong() ?: 0L
+
         val alarmSoundUri = (
                 preferenceRepository.getStringPreference("alarm_sound")
                     ?: preferenceRepository.saveStringPreference(
@@ -185,6 +188,7 @@ class StateRepository(
         settingsState.update { currentState ->
             currentState.copy(
                 focusGoal = focusGoal,
+                konkurDate = konkurDate,
                 theme = theme,
                 colorScheme = colorScheme,
                 alarmSoundUri = alarmSoundUri,

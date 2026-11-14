@@ -190,4 +190,10 @@
     <string name="mode_countdown">⏳ پومودورو معکوس</string>
     <string name="total_tests_title">مجموع کل تست‌ها</string>
     <string name="tests_count">%1$d تست</string>
+    <string name="konkur_countdown">⏳ %1$d روز تا کنکور</string>
+    <string name="konkur_today">⏳ امروز روز کنکوره — موفق باشی!</string>
+    <string name="konkur_date">تاریخ کنکور</string>
+    <string name="konkur_date_unset">تعیین نشده — برای انتخاب بزن</string>
+    <string name="clear">پاک کردن</string>
+    <string name="ok">تأیید</string>
 </resources>

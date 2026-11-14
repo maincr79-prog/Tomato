@@ -33,6 +33,8 @@ import tomato.shared.generated.resources.Res
 import tomato.shared.generated.resources.focus_streak
 import tomato.shared.generated.resources.goal_reached
 import tomato.shared.generated.resources.hours_and_minutes_format
+import tomato.shared.generated.resources.konkur_countdown
+import tomato.shared.generated.resources.konkur_today
 import tomato.shared.generated.resources.set_goal_hint
 import tomato.shared.generated.resources.tests_today
 import tomato.shared.generated.resources.today_focus
@@ -102,6 +104,15 @@ fun TodayCard(today: TodaySummary, modifier: Modifier = Modifier) {
                 style = typography.bodySmall,
                 color = colorScheme.onSurfaceVariant
             )
+            today.daysToKonkur?.let { days ->
+                Text(
+                    if (days > 0) stringResource(Res.string.konkur_countdown, days)
+                    else stringResource(Res.string.konkur_today),
+                    style = typography.bodySmall,
+                    fontWeight = FontWeight.SemiBold,
+                    color = colorScheme.tertiary
+                )
+            }
             if (today.goalMillis <= 0 || today.goalProgress >= 1f) Text(
                 if (today.goalMillis <= 0) stringResource(Res.string.set_goal_hint)
                 else stringResource(Res.string.goal_reached),

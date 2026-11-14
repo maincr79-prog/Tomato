@@ -158,6 +158,9 @@ class SettingsViewModel(
             is SettingsAction.SaveBlackTheme -> saveSetting(SettingsKey.BLACK_THEME, action.enabled)
             is SettingsAction.SaveAodEnabled -> saveSetting(SettingsKey.AOD_ENABLED, action.enabled)
 
+            is SettingsAction.SaveKonkurDate ->
+                saveSetting(SettingsKey.KONKUR_DATE, action.epochDay.toInt())
+
             is SettingsAction.SaveFocusGoal -> saveSetting(
                 SettingsKey.FOCUS_GOAL,
                 action.goal.toInt()
@@ -386,6 +389,7 @@ class SettingsViewModel(
             _settingsState.update { currentState ->
                 when (key) {
                     SettingsKey.FOCUS_GOAL -> currentState.copy(focusGoal = value.toLong())
+                    SettingsKey.KONKUR_DATE -> currentState.copy(konkurDate = value.toLong())
                     SettingsKey.VIBRATION_ON_DURATION -> currentState.copy(vibrationOnDuration = value.toLong())
                     SettingsKey.VIBRATION_OFF_DURATION -> currentState.copy(vibrationOffDuration = value.toLong())
                     SettingsKey.VIBRATION_AMPLITUDE -> currentState.copy(vibrationAmplitude = value)

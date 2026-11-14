@@ -39,6 +39,7 @@ import org.nsh07.pomodoro.data.TestLogRepository
 import org.nsh07.pomodoro.data.TopicRepository
 import org.nsh07.pomodoro.service.TimerHelper
 import org.nsh07.pomodoro.ui.Screen
+import org.nsh07.pomodoro.utils.daysUntil
 import org.nsh07.pomodoro.utils.focusStreak
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
@@ -74,7 +75,9 @@ class TimerViewModel(
             focusMillis = todayStat?.totalFocusTime() ?: 0L,
             goalMillis = settings.focusGoal,
             tests = tests,
-            streak = focusStreak(days.filter { it.totalFocusTime() > 0 }.map { it.date }.toSet())
+            streak = focusStreak(days.filter { it.totalFocusTime() > 0 }.map { it.date }.toSet()),
+            daysToKonkur = settings.konkurDate.takeIf { it > 0 }
+                ?.let { daysUntil(LocalDate.ofEpochDay(it)) }
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), TodaySummary())
 
@@ -148,7 +151,9 @@ data class TodaySummary(
     val focusMillis: Long = 0L,
     val goalMillis: Long = 0L,
     val tests: Int = 0,
-    val streak: Int = 0
+    val streak: Int = 0,
+    /** Days left until Konkur, or null when no exam date is set. */
+    val daysToKonkur: Int? = null
 ) {
     /** 0..1 progress towards the daily goal (0 when no goal is set). */
     val goalProgress: Float

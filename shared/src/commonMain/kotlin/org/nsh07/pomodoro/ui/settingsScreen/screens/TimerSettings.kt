@@ -83,6 +83,7 @@ import org.nsh07.pomodoro.ui.performSegmentTick
 import org.nsh07.pomodoro.ui.performToggle
 import org.nsh07.pomodoro.ui.settingsScreen.SettingsSwitchItem
 import org.nsh07.pomodoro.ui.settingsScreen.components.CreateTopicBottomSheet
+import org.nsh07.pomodoro.ui.settingsScreen.components.KonkurDateItem
 import org.nsh07.pomodoro.ui.settingsScreen.components.MinuteInputs
 import org.nsh07.pomodoro.ui.settingsScreen.components.PlusDivider
 import org.nsh07.pomodoro.ui.settingsScreen.components.SliderListItem
@@ -319,6 +320,13 @@ fun TimerSettings(
                                 onAction(SettingsAction.SaveFocusGoal(this - (this % (30 * 60 * 1000))))
                             }
                         }
+                    }
+                    item {
+                        Spacer(Modifier.height(2.dp))
+                        KonkurDateItem(
+                            epochDay = settingsState.konkurDate,
+                            onSave = { onAction(SettingsAction.SaveKonkurDate(it)) }
+                        )
                     }
                     item { Spacer(Modifier.height(12.dp)) }
 

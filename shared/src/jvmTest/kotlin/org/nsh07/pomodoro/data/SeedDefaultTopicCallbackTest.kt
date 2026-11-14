@@ -32,8 +32,14 @@ import kotlin.test.assertNotNull
 class SeedDefaultTopicCallbackTest : DatabaseTest(seedsDefaultTopic = true) {
 
     @Test
-    fun `a new database holds exactly the default topic`(): Unit = runBlocking {
-        assertEquals(listOf(defaultTopic), topicDao.getAllTopics().first())
+    fun `a new database holds the default topic and the five Konkur subjects`(): Unit = runBlocking {
+        val topics = topicDao.getAllTopics().first()
+        assertEquals(6, topics.size)
+        assertEquals(defaultTopic, topics.single { it.id == DEFAULT_TOPIC_ID })
+        assertEquals(
+            setOf("زیست‌شناسی", "ریاضیات", "فیزیک", "شیمی", "عمومی و متفرقه"),
+            topics.filter { it.id != DEFAULT_TOPIC_ID }.map { it.name }.toSet()
+        )
     }
 
     @Test
@@ -45,7 +51,8 @@ class SeedDefaultTopicCallbackTest : DatabaseTest(seedsDefaultTopic = true) {
 
     @Test
     fun `topics added afterwards do not take the default topic's id`(): Unit = runBlocking {
-        assertEquals(DEFAULT_TOPIC_ID + 1, topicDao.insertTopic(topic("Work")))
+        // ids 2..6 are taken by the seeded Konkur subjects
+        assertEquals(DEFAULT_TOPIC_ID + 6, topicDao.insertTopic(topic("Work")))
     }
 
     @Test

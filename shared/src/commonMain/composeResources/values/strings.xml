@@ -198,4 +198,9 @@
     <string name="mode_countdown">⏳ Pomodoro countdown</string>
     <string name="total_tests_title">All-time tests</string>
     <string name="tests_count">%1$d tests</string>
+    <string name="konkur_countdown">⏳ %1$d days to Konkur</string>
+    <string name="konkur_today">⏳ Konkur is today — good luck!</string>
+    <string name="konkur_date">Konkur date</string>
+    <string name="konkur_date_unset">Not set — tap to choose</string>
+    <string name="clear">Clear</string>
 </resources>

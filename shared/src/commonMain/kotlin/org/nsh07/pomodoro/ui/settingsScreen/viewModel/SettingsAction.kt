@@ -38,6 +38,7 @@ sealed interface SettingsAction {
     data class SaveColorScheme(val color: Color) : SettingsAction
 
     data class SaveFocusGoal(val goal: Long) : SettingsAction
+    data class SaveKonkurDate(val epochDay: Long) : SettingsAction
 
     data class SaveVibrationOnDuration(val duration: Long) : SettingsAction
     data class SaveVibrationOffDuration(val duration: Long) : SettingsAction

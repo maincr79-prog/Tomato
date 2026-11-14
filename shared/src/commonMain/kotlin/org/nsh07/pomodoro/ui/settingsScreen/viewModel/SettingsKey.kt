@@ -30,6 +30,7 @@ enum class SettingsKey(val key: String) {
     THEME("theme"),
     COLOR_SCHEME("color_scheme"),
     FOCUS_GOAL("focus_goal"),
+    KONKUR_DATE("konkur_date"),
     VIBRATION_ON_DURATION("vibration_on_duration"),
     VIBRATION_OFF_DURATION("vibration_off_duration"),
     VIBRATION_AMPLITUDE("vibration_amplitude")

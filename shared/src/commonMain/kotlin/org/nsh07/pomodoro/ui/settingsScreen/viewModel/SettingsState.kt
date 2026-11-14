@@ -41,6 +41,8 @@ data class SettingsState(
     val vibrationOffDuration: Long = 1000L,
     val vibrationAmplitude: Int = -1,
     val focusGoal: Long = 0L,
+    /** Konkur exam date as epoch day; 0 = not set. */
+    val konkurDate: Long = 0L,
 
     val alarmSoundUri: String? = getDefaultAlarmTone(),
 

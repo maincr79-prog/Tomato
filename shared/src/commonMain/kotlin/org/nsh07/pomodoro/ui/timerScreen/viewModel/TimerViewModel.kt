@@ -39,6 +39,7 @@ import org.nsh07.pomodoro.data.TestLogRepository
 import org.nsh07.pomodoro.data.TopicRepository
 import org.nsh07.pomodoro.service.TimerHelper
 import org.nsh07.pomodoro.ui.Screen
+import org.nsh07.pomodoro.utils.focusStreak
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 import kotlin.time.Duration.Companion.milliseconds
@@ -73,25 +74,9 @@ class TimerViewModel(
             focusMillis = todayStat?.totalFocusTime() ?: 0L,
             goalMillis = settings.focusGoal,
             tests = tests,
-            streak = streakOf(days)
+            streak = focusStreak(days.filter { it.totalFocusTime() > 0 }.map { it.date }.toSet())
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), TodaySummary())
-
-    /**
-     * Days in a row with some focus time. Today only counts once it has focus, so an
-     * unfinished today does not break yesterday's streak.
-     */
-    private fun streakOf(daysNewestFirst: List<Stat>): Int {
-        val focusDays = daysNewestFirst.filter { it.totalFocusTime() > 0 }.map { it.date }.toSet()
-        var day = LocalDate.now()
-        if (day !in focusDays) day = day.minusDays(1)
-        var streak = 0
-        while (day in focusDays) {
-            streak++
-            day = day.minusDays(1)
-        }
-        return streak
-    }
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
